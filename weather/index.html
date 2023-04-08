@@ -1,0 +1,179 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html lang="en" class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="zh-CN">
+<!--<![endif]-->
+
+<head>
+    <!-- <meta name="viewport" content="width = 1050, user-scalable = no" /> -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>weather | klog</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+    <link rel="mask-icon" href="/images/logo.svg" color="#222">
+    <link rel="stylesheet" href="/css/main.css">
+
+    <link href="css/basic.css" rel="stylesheet" />
+    <link href="css/book.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/qweather-icons@1.1.1/font/qweather-icons.css">
+    <script type="text/javascript" src="js/jquery.min.1.7.js"></script>
+    <script type="text/javascript" src="js/turn.js"></script>
+    <script type="text/javascript" src="js/weather.js"></script>
+    <script type="text/javascript" src="js/ncov.js"></script>
+    <script type="text/javascript" src="js/book.js"></script>
+</head>
+
+<body>
+    <div class="flipbook-viewport">
+        <div class="container">
+            <div class="flipbook">
+                <div class="hard"></div>
+                <div class="hard"></div>
+            </div>
+        </div>
+    </div>
+    <div class="btn-func">
+        <button onclick="doFullScreen() ">全屏</button>
+        <button onclick="autoTurn() ">自动翻书</button>
+        <button onclick="broadcast() ">语音播报</button>
+    </div>
+</body>
+
+<script type="text/javascript ">
+    const hotArea = ['北京', '成都', '上海', '重庆', '广州', '三亚', '西安', '厦门', '丽江', '杭州', '青岛', '大理', '武汉', '南京', '深圳', '长沙', '苏州', '天津', '昆明', '北海'];
+    const flipbook = $('.flipbook');
+    let hotAreaIndex = 0;
+    let autoTurnTimer;
+    let reverseTurn = false;
+    let isFullScreen = false;
+    let isAutoTurn = false;
+    let isBroadcast = false;
+    let synth = window.speechSynthesis;
+    let curDate = new Date((new Date).getTime() + 8 * 60 * 60 * 1000).toJSON().split('T').join(' ').substr(0, 10);
+
+    function loadApp() {
+        flipbook.turn({
+            elevation: 50,
+            duration: 1000,
+            gradients: true,
+            autoCenter: true,
+            when: {
+                turned: (event, page, view) => {
+                    if (hotAreaIndex - page < 3) {
+                        addPage();
+                    }
+
+                    if (isBroadcast) {
+                        speak();
+                    }
+                }
+            }
+        });
+    }
+
+    function speak() {
+        let pageNum = flipbook.turn('page');
+        let nextPageNum = (pageNum % 2) === 0 ? pageNum + 1 : pageNum - 1;
+
+        let voices = synth.getVoices().filter(i => i.lang.includes("zh"));
+        if (pageNum > 2 && pageNum <= hotAreaIndex + 2) {
+            let text = $('.p' + pageNum + ' .weather-local')[0].innerText;
+            let temp = $('.p' + pageNum + ' .weather-temp')[0];
+            if (temp === undefined) {
+                return;
+            }
+            var utterThis = new SpeechSynthesisUtterance(text + temp.innerText);
+            utterThis.voice = voices[0];
+            synth.speak(utterThis);
+        }
+
+        if (nextPageNum > 2 && nextPageNum <= hotAreaIndex + 2) {
+            let nextText = $('.p' + nextPageNum + ' .weather-local')[0].innerText;
+            let nextTemp = $('.p' + nextPageNum + ' .weather-temp')[0];
+            if (nextTemp === undefined) {
+                return;
+            }
+            var nextUtterThis = new SpeechSynthesisUtterance(nextText + nextTemp.innerText);
+            nextUtterThis.voice = voices[3];
+            synth.speak(nextUtterThis);
+        }
+    }
+
+    function broadcast() {
+        if (!isBroadcast) {
+            $('.btn-func>button')[2].innerHTML = '停止播报';
+        } else {
+            $('.btn-func>button')[2].innerHTML = '语音播报';
+        }
+        isBroadcast = !isBroadcast;
+    }
+
+    function autoTurn() {
+        if (!isAutoTurn) {
+            isAutoTurn = true;
+            $('.btn-func>button')[1].innerHTML = '停止翻书';
+            autoTurnTimer = setInterval(() => {
+                let curPage = flipbook.turn('page');
+                if (reverseTurn && curPage !== 1) {
+                    flipbook.turn('previous');
+                } else {
+                    flipbook.turn('next');
+                    reverseTurn = !flipbook.turn('hasPage', curPage + 1);
+                }
+            }, 10000);
+        } else {
+            isAutoTurn = false;
+            $('.btn-func>button')[1].innerHTML = '自动翻书';
+            clearInterval(autoTurnTimer);
+        }
+    }
+
+    function doFullScreen() {
+        if (!isFullScreen) {
+            $('.btn-func>button')[0].innerHTML = '退出全屏';
+            document.documentElement.requestFullscreen();
+            isFullScreen = true;
+        } else {
+            $('.btn-func>button')[0].innerHTML = '全屏';
+            document.exitFullscreen();
+            isFullScreen = false;
+        }
+    }
+
+    async function addPage() {
+        let batch = 1;
+        if (hotAreaIndex === hotArea.length) {
+            return;
+        }
+        for (hotAreaIndex; hotAreaIndex < hotArea.length; hotAreaIndex++) {
+            if (batch++ > 3) {
+                break;
+            }
+            const location = hotArea[hotAreaIndex];
+            const pageNum = hotAreaIndex + 1;
+            const page = await buildPage(location, pageNum);
+            flipbook.turn('addPage', page, pageNum + 2);
+        }
+        if (hotAreaIndex === hotArea.length) {
+            flipbook.turn('addPage', '<div class="hard"></div>', hotAreaIndex + 3);
+            if (hotAreaIndex % 2 === 0) {
+                flipbook.turn('addPage', '<div class="hard"></div>', hotAreaIndex + 4);
+            }
+        }
+    }
+
+    $(function() {
+        // 窗口自适应
+        document.documentElement.style.fontSize = document.documentElement.clientWidth / 94.5 + 'px';
+        // 加载book
+        loadApp();
+    })
+</script>
+
+</html>
