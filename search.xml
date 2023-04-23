@@ -1,770 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>java开发环境搭建</title>
-    <url>/karma/ff3c284c.html</url>
-    <content><![CDATA[<img src="https://raw.githubusercontent.com/Karma1996/Picture/master/java-logo-png.png" alt="This is Java"  />
-
-<span id="more"></span>
-
-<h1 id="windows"><a href="#windows" class="headerlink" title="windows"></a>windows</h1><h2 id="系统信息"><a href="#系统信息" class="headerlink" title="系统信息"></a>系统信息</h2><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/20220504150058.png" alt="img" style="zoom:67%;" />
-
-<h2 id="jdk下载"><a href="#jdk下载" class="headerlink" title="jdk下载"></a><a href="https://www.oracle.com/java/technologies/downloads/#java8-windows">jdk下载</a></h2><p><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220504144453754.png" alt="image-20220504144453754"></p>
-<h2 id="jdk配置"><a href="#jdk配置" class="headerlink" title="jdk配置"></a>jdk配置</h2><ol>
-<li><p>制作压缩包</p>
-<p>orcale没有为windows系统提供<code>*.tar.gz</code>格式jdk，可以通过exe文件转换得到。具体方法参考链接：<a href="https://www.oracle.com/java/technologies/downloads/#java8-windows">https://www.oracle.com/java/technologies/downloads/#java8-windows</a></p>
-<img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220504144758781.png" alt="image-20220504144758781" style="zoom: 50%;" />
-</li>
-<li><p>环境变量配置</p>
-<img src="https://raw.githubusercontent.com/Karma1996/Picture/master/20220504150427.png" alt="img" style="zoom:67%;" />
-
-<blockquote>
-<p>增加系统变量：<code>JAVA_8</code>、<code>JAVA_HOME</code>；编辑系统变量<code>Path</code>，追加<code>%JAVA_HOME%\bin</code></p>
-</blockquote>
-</li>
-<li><p>验证配置</p>
-</li>
-</ol>
-<img src="https://raw.githubusercontent.com/Karma1996/Picture/master/20220504150159.png" alt="img" style="zoom:67%;" />
-
-<h1 id="linux"><a href="#linux" class="headerlink" title="linux"></a>linux</h1><h2 id="系统信息-1"><a href="#系统信息-1" class="headerlink" title="系统信息"></a>系统信息</h2><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/20220504142103.png" alt="img" style="zoom: 67%;" />
-
-<h2 id="jdk下载-1"><a href="#jdk下载-1" class="headerlink" title="jdk下载"></a><a href="https://www.oracle.com/java/technologies/javase/javase8u211-later-archive-downloads.html">jdk下载</a></h2><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220504134741441.png" alt="image-20220504134741441" style="zoom:50%;" />
-
-<p>选择适合自己系统架构的版本，文件格式建议选择<code>*.tar.gz</code>（可支持多版本切换）。</p>
-<h2 id="jdk配置-1"><a href="#jdk配置-1" class="headerlink" title="jdk配置"></a>jdk配置</h2><ol>
-<li><p>解压缩到指定路径</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">x jdk-8u331-linux-x64.tar.gz</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/20220504142256.png" alt="img"></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo <span class="built_in">mv</span> jdk1.8.0_331 /opt/jdk8u331</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/20220504142659.png" alt="img"></p>
-</li>
-<li><p>环境变量配置</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># PATH</span></span><br><span class="line"><span class="built_in">export</span> JAVA8=<span class="string">&#x27;/opt/jdk8u331&#x27;</span></span><br><span class="line"><span class="built_in">export</span> JAVA_HOME=<span class="variable">$JAVA8</span></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$&#123;PATH&#125;</span>:<span class="variable">$&#123;JAVA_HOME&#125;</span>/bin</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>验证配置</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~</span><br><span class="line">java -version</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/20220504142736.png" alt="img"></p>
-</li>
-</ol>
-<h1 id="macOS"><a href="#macOS" class="headerlink" title="macOS"></a>macOS</h1><h2 id="系统信息-2"><a href="#系统信息-2" class="headerlink" title="系统信息"></a>系统信息</h2><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220503180724598.png" alt="image-20220503180724598" style="zoom: 67%;" />
-
-<p>为完全释放M1芯片性能，故选用<a href="https://www.azul.com/downloads/?package=jdk#download-openjdk">zaul</a>提供的OpenJDK。</p>
-<p><em>非必要条件</em>：<a href="https://ohmyz.sh/">oh-my-zsh</a></p>
-<h2 id="jdk下载-2"><a href="#jdk下载-2" class="headerlink" title="jdk下载"></a><a href="https://www.azul.com/downloads/?package=jdk#download-openjdk">jdk下载</a></h2><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220503181307987.png" alt="image-20220503181307987" style="zoom: 50%;" />
-
-<p>建议Java Package选择<code>JDK FX</code>，下载格式选择<code>.tar.gz</code>（可支持多版本切换）。</p>
-<h2 id="jdk配置-2"><a href="#jdk配置-2" class="headerlink" title="jdk配置"></a>jdk配置</h2><ol>
-<li><p>解压缩下载包到指定路径</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">-- 解压缩</span><br><span class="line">x zulu8.62.0.19-ca-fx-jdk8.0.332-macosx_aarch64.tar.gz</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220503191722365.png" alt="image-20220503191722365"></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mv</span> zulu-8.jdk ~/Library/Java/JavaVirtualMachines/jdk8u332</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220503191919928.png" alt="image-20220503191919928"></p>
-</li>
-<li><p>环境变量配置</p>
-<p>~&#x2F;.zshrc文件追加配置</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># PATH</span></span><br><span class="line"><span class="built_in">export</span> JAVA8=/Users/karma/Library/Java/JavaVirtualMachines/jdk8u332/Contents/Home</span><br><span class="line"><span class="built_in">export</span> JAVA_HOME=<span class="variable">$&#123;JAVA8&#125;</span></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$&#123;PATH&#125;</span>:<span class="variable">$&#123;JAVA_HOME&#125;</span>/bin</span><br></pre></td></tr></table></figure>
-
-<p>保存文件后，更新配置</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.zshrc</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>验证配置</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~</span><br><span class="line">java -version</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220503193156497.png" alt="image-20220503193156497"></p>
-</li>
-</ol>
-<h2 id="其他问题"><a href="#其他问题" class="headerlink" title="其他问题"></a>其他问题</h2><ol>
-<li><p>无法打开“xxx”，因为Apple无法检查其是否包含恶意软件。</p>
-<img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220503193053338.png" alt="image-20220503193053338" style="zoom:50%;" />
-
-<blockquote>
-<p>打开“系统偏好设置”-&gt;“安全性与隐私”-&gt;“通用”，会看到如下所示的界面，选择“仍要打开”</p>
-</blockquote>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>计算机</category>
-      </categories>
-      <tags>
-        <tag>java</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>HTML5</title>
-    <url>/karma/98f3a6d9.html</url>
-    <content><![CDATA[<img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220603114847621.png" alt="What is HTML5" style="zoom:67%;" />
-
-<span id="more"></span>
-
-<h1 id="HTML5发展"><a href="#HTML5发展" class="headerlink" title="HTML5发展"></a>HTML5发展</h1><table>
-<thead>
-<tr>
-<th align="center">年份</th>
-<th align="center">大事记</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">1991</td>
-<td align="center">HTML</td>
-</tr>
-<tr>
-<td align="center">1994</td>
-<td align="center">HTML2</td>
-</tr>
-<tr>
-<td align="center">1996</td>
-<td align="center">CSS1+JavaScript</td>
-</tr>
-<tr>
-<td align="center">1997</td>
-<td align="center">HTML4</td>
-</tr>
-<tr>
-<td align="center">1998</td>
-<td align="center">CSS2</td>
-</tr>
-<tr>
-<td align="center">2000</td>
-<td align="center">XHTML</td>
-</tr>
-<tr>
-<td align="center">2002</td>
-<td align="center">Tableless Web Design（表格布局）</td>
-</tr>
-<tr>
-<td align="center">2005</td>
-<td align="center">AJAX</td>
-</tr>
-<tr>
-<td align="center">2009</td>
-<td align="center">HTML5</td>
-</tr>
-<tr>
-<td align="center">2014</td>
-<td align="center">HTLML5 Finalized</td>
-</tr>
-</tbody></table>
-<p>2002年的表格布局逐渐被淘汰；2009年就已经退出了HTML5的草案，直到2014年才有定稿，因为有移动端的推动。H5草案的前身叫：<strong>Web Application</strong>，最早由 <a href="https://baike.baidu.com/item/WHATWG/5803339?fr=aladdin">WHATWG</a> 这个组织在2004年提出。2007年被<strong>W3C</strong>组织接纳，并在2008-01-22发布HTML5的第一个草案。</p>
-<p>HTML5作为HTML标记语言的最新版本，它制定了Web应用开发的一系列标准，成为第一个将Web作为应用开发平台的HTML语言。</p>
-<p><strong>HTML5广义概念</strong>：HTML5代表浏览器端技术的一个发展阶段。在这个阶段，浏览器的呈现技术得到了飞跃发展和广泛支持，它包括：HTML5、CSS3、JavaScript API在内的一套技术组合。是新一代开发<strong>Web富客户端（具有很强交互性和体验的客户端程序）</strong>应用程序的整体解决方案。</p>
-<h1 id="新特性"><a href="#新特性" class="headerlink" title="新特性"></a>新特性</h1><ul>
-<li>HTML<ul>
-<li>标签<ul>
-<li>更语义化标签</li>
-<li>应用程序标签</li>
-</ul>
-</li>
-<li>属性<ul>
-<li>链接关系描述</li>
-<li>结构数据标记</li>
-<li>ARIA</li>
-<li>自定义属性</li>
-</ul>
-</li>
-<li>智能表单<ul>
-<li>新的表单类型</li>
-<li>虚拟键盘适配</li>
-</ul>
-</li>
-<li>网页多媒体<ul>
-<li>音频</li>
-<li>视频</li>
-<li>字幕</li>
-</ul>
-</li>
-<li>Canvas<ul>
-<li>2D</li>
-<li>3D（WebGL）</li>
-</ul>
-</li>
-<li>SVG</li>
-</ul>
-</li>
-<li>CSS<ul>
-<li>New Selector</li>
-<li>Web Fonts</li>
-<li>Text Styles</li>
-<li>Opacity</li>
-<li>HSL Color</li>
-<li>Rounded Corners</li>
-<li>Gradients</li>
-<li>Shadows</li>
-<li>Background Enhancements</li>
-<li>Border Image</li>
-<li>Flexible Box Model</li>
-<li>Transforms</li>
-<li>Transitions</li>
-<li>Animations</li>
-<li>Ect.</li>
-</ul>
-</li>
-<li>JavaScript API<ul>
-<li>核心平台提升<ul>
-<li>新的选择器</li>
-<li>Element.classList</li>
-<li>访问历史API</li>
-<li>全屏API</li>
-</ul>
-</li>
-<li>网页存储<ul>
-<li>Application Cache</li>
-<li>localStorage</li>
-<li>sessionStorage</li>
-<li>WebSQL</li>
-<li>IndexedDB</li>
-</ul>
-</li>
-<li>设备信息访问<ul>
-<li>网络状态</li>
-<li>硬件访问</li>
-<li>设备方向</li>
-<li>地理围栏</li>
-</ul>
-</li>
-<li>拖放操作<ul>
-<li>网页内拖放</li>
-<li>桌面拖入</li>
-<li>桌面拖出</li>
-</ul>
-</li>
-<li>文件<ul>
-<li>文件系统API</li>
-<li>FileReader</li>
-</ul>
-</li>
-<li>网络访问<ul>
-<li>XMLHttpRequest</li>
-<li>fetch</li>
-<li>WebSocket</li>
-</ul>
-</li>
-<li>多线程</li>
-<li>桌面通知</li>
-</ul>
-</li>
-</ul>
-<h2 id="语义化的标签"><a href="#语义化的标签" class="headerlink" title="语义化的标签"></a>语义化的标签</h2><p>语义标签<code>&lt;p&gt;</code>表示一个段落、<code>&lt;ul&gt;</code>表示一个无序列表。标签语义化的作用：</p>
-<ul>
-<li>便于开发者阅读和写出更优雅的代码</li>
-<li>有利于浏览器或事网络爬虫解析，从而更好分析内容</li>
-<li>更好的搜索引擎优化</li>
-</ul>
-<p>HTML的职责是描述一块内容是什么，它的外观应该由CSS来决定。</p>
-<p>传统网页布局：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;header&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">&quot;nav&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;main&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;article&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;aside&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;footer&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>H5的经典网页布局：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">header</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">&quot;nav&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">header</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;main&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">article</span>&gt;</span><span class="tag">&lt;/<span class="name">article</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">aside</span>&gt;</span><span class="tag">&lt;/<span class="name">aside</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">footer</span>&gt;</span><span class="tag">&lt;/<span class="name">footer</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="新增的表单类型"><a href="#新增的表单类型" class="headerlink" title="新增的表单类型"></a>新增的表单类型</h3><ul>
-<li>email：只能输入email格式，自动带有验证功能</li>
-<li>tel：手机号</li>
-<li>url：只能输入url格式</li>
-<li>number：只能输入数字</li>
-<li>search：搜索框</li>
-<li>range：滑动条</li>
-<li>color：拾色器</li>
-<li>time：时间</li>
-<li>date：日期</li>
-<li>datetime：日期时间（兼容性问题）</li>
-<li>month：月份</li>
-<li>week：月份</li>
-</ul>
-<p class="codepen" data-height="300" data-default-tab="result" data-slug-hash="ExQWMog" data-editable="true" data-user="karma1996" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-  <span>See the Pen <a href="https://codepen.io/karma1996/pen/ExQWMog">
-  form</a> by karma (<a href="https://codepen.io/karma1996">@karma1996</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
-
-
-
-
-<h2 id="拖拽"><a href="#拖拽" class="headerlink" title="拖拽"></a>拖拽</h2><p>在HTML5规范中，我们可以通过为元素增加<code>draggable=&quot;true&quot;</code>来设置此元素是否可以进行拖拽操作，其中图片、链接默认开启拖拽功能。</p>
-<ol>
-<li><p>拖拽元素</p>
-<p>页面中设置了<code>draggable=&quot;true&quot;</code>属性的元素。</p>
-<p>拖拽元素的监听事件：</p>
-<ul>
-<li><code>ondragstart</code>当拖拽开始时调用</li>
-<li><code>ondragleave</code>当鼠标离开拖拽元素时调用</li>
-<li><code>ondragend</code>当拖拽结束时调用</li>
-<li><code>ondrag</code>整个拖拽过程都会调用</li>
-</ul>
-</li>
-<li><p>目标元素</p>
-<p>元素A拖拽到元素B，那么元素B就是目标元素。页面中任何一个元素都可以成为目标元素。</p>
-<p>目标元素的监听事件：</p>
-<ul>
-<li><code>ondragenter</code>当拖拽元素进入时调用</li>
-<li><code>ondragover</code>当拖拽元素停留在目标元素时，就会连续一直触发</li>
-<li><code>ondrop</code>当在目标元素上松开鼠标时调用</li>
-<li><code>ondragleave</code>当鼠标离开目标元素时调用</li>
-</ul>
-<blockquote>
-<p>如果想让拖拽元素在目标元素里做点事情，就必须要在 <code>ondragover()</code> 里加<code>event.preventDefault()</code>这一行代码。</p>
-</blockquote>
-<p class="codepen" data-height="300" data-default-tab="result" data-slug-hash="dydKeKQ" data-editable="true" data-user="karma1996" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-  <span>See the Pen <a href="https://codepen.io/karma1996/pen/dydKeKQ">
-  draggable</a> by karma (<a href="https://codepen.io/karma1996">@karma1996</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script></li>
-</ol>
-<h2 id="历史"><a href="#历史" class="headerlink" title="历史"></a>历史</h2><p>HTML5中可以通过<code>window.history</code>操作访问历史状态，让一个页面可以有多个历史状态<code>window.history</code>对象可以让我们管理历史记录，可用于但页面应用，无刷新改变网页内容。</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">window</span>.<span class="property">history</span>.<span class="title function_">forward</span>(); <span class="comment">//前进</span></span><br><span class="line"><span class="variable language_">window</span>.<span class="property">history</span>.<span class="title function_">back</span>(); <span class="comment">// 后退</span></span><br><span class="line"><span class="variable language_">window</span>.<span class="property">history</span>.<span class="title function_">go</span>(); <span class="comment">// 刷新</span></span><br><span class="line"><span class="variable language_">window</span>.<span class="property">history</span>.<span class="title function_">go</span>(n); <span class="comment">// n=1表示前进、n=-1表示后退、n=0表示刷新。如果移动的位置超出了访问历史的边界，会默认失败，不会报错。</span></span><br><span class="line">history.<span class="property">pushState</span>; <span class="comment">//放入历史中的状态数据，设置title（兼容性不好）</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="地理位置"><a href="#地理位置" class="headerlink" title="地理位置"></a>地理位置</h2><p>HTML5规范中，增加了获取用户地理信息的API，这样使得我们可以基于用户位置开发互联网应用，即<strong>基于位置服务LBS</strong>（Location Base Service）。</p>
-<p>获取地理位置信息方式：</p>
-<table>
-<thead>
-<tr>
-<th align="center">数据源</th>
-<th align="center">优点</th>
-<th align="center">缺点</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">IP地址</td>
-<td align="center">任何地方都可用，在服务器端处理</td>
-<td align="center">精确到城市级别（法规原因），运算代价大</td>
-</tr>
-<tr>
-<td align="center">Wi-Fi</td>
-<td align="center">精确<br />可在室内使用<br />简单、快捷</td>
-<td align="center">Wi-Fi点介入少的地方无法使用</td>
-</tr>
-<tr>
-<td align="center">手机信号</td>
-<td align="center">相当精确<br />可在室内使用<br />简单、快捷</td>
-<td align="center">需要设备能够访问</td>
-</tr>
-<tr>
-<td align="center">GPS</td>
-<td align="center">很精确</td>
-<td align="center">定位时间长、耗电量大<br />室内效果差<br />需要额外硬件设备支持</td>
-</tr>
-<tr>
-<td align="center">用户自定义</td>
-<td align="center">用户自行输入，比自动检测快</td>
-<td align="center">可能很不精确，当用户更换位置后</td>
-</tr>
-</tbody></table>
-<p>Html5 Geolocation规范提供了一套保护用户隐私的机制。必须先得到用户许可，才能获取用户的位置信息。</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">navigator.<span class="title function_">getCurrentPosition</span>(successCallback, errorCallback, options) <span class="comment">// 获取当前地理信息</span></span><br><span class="line">navigator.<span class="title function_">watchPosition</span>(successCallback, errorCallback, options) <span class="comment">// 重复获取当前地理信息</span></span><br><span class="line">navigator.<span class="title function_">clearWatch</span>() <span class="comment">// 停止 watchPosition() 方法</span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>当成功获取地理信息后，会调用successCallback，并返回一个包含位置信息的对象position: Coords（即坐标）。当获取地理信息失败后，会调用errorCallback，并返回错误信息error。可选参数options对象可以调整位置信息数据的收集方式。</p>
-</blockquote>
-<h2 id="全屏"><a href="#全屏" class="headerlink" title="全屏"></a>全屏</h2><blockquote>
-<p>HTML5规范用户自定义网页上任意元素全屏显示</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title function_">requestFullscreen</span>()   <span class="comment">// 让元素开启全屏显示</span></span><br><span class="line"><span class="title function_">cancleFullscreen</span>()    <span class="comment">// 让元素关闭全屏显示</span></span><br><span class="line"><span class="variable language_">document</span>.<span class="property">fullScreen</span>		<span class="comment">// 检测当前元素是否处于全屏状态</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="存储"><a href="#存储" class="headerlink" title="存储"></a>存储</h2><p>随着互联网的快速发展，基于网页的应用越来越普遍，同时也变的越来越复杂，为了满足各种各样的需求，会经常性在本地存储大量的数据，传统方式我们以document.cookie来进行存储的，但是由于其存储大小只有4k左右，并且解析也相当的复杂，给开发带来诸多不便，HTML5规范则提出解决方案。</p>
-<ol>
-<li><p>会话存储</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">window</span>.<span class="property">sessionStorage</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>保存在内存中</li>
-<li>生命周期为关闭浏览器窗口</li>
-<li>在同一个窗口下数据共享</li>
-</ul>
-</li>
-<li><p>本地存储</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">window</span>.<span class="property">localStorage</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>有可能在内存中，也有可能在硬盘中</li>
-<li>永久生效，可手动清理</li>
-<li>可以多窗口共享</li>
-</ul>
-</li>
-</ol>
-<p>相对于传统cookie方式，新的方式设置、读取更方便；容量较大（sessionStorage约5M、localStorage约20M）。两者在存储数据时，只能存储字符串，可以将对象<code>JSON.stringfy()</code>编码后存储。</p>
-<p>常见API</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title function_">setItem</span>(key, value); <span class="comment">// 设置item，无则新增，有则更新</span></span><br><span class="line"></span><br><span class="line"><span class="title function_">getItem</span>(key); <span class="comment">// 读取存储内容</span></span><br><span class="line"></span><br><span class="line"><span class="title function_">removeItem</span>(key); <span class="comment">// 删除存储内容</span></span><br><span class="line"></span><br><span class="line"><span class="title function_">clear</span>(); <span class="comment">// 清空所有存储内容</span></span><br><span class="line"></span><br><span class="line"><span class="title function_">key</span>(n); <span class="comment">// 根据索引值来获取存储内容</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="网络状态"><a href="#网络状态" class="headerlink" title="网络状态"></a>网络状态</h2><p>可以通过注册监听事件来感知用户网络连接情况</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">window</span>.<span class="title function_">addEventListener</span>(<span class="string">&#x27;online&#x27;</span>, <span class="keyword">function</span> (<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="title function_">alert</span>(<span class="string">&#x27;网络连接建立！&#x27;</span>);</span></span><br><span class="line"><span class="language-javascript">    &#125;);</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">window</span>.<span class="title function_">addEventListener</span>(<span class="string">&#x27;offline&#x27;</span>, <span class="keyword">function</span> (<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="title function_">alert</span>(<span class="string">&#x27;网络连接断开！&#x27;</span>);</span></span><br><span class="line"><span class="language-javascript">    &#125;)</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="应用缓存"><a href="#应用缓存" class="headerlink" title="应用缓存"></a>应用缓存</h2><p>HTML5中可以轻松的构建一个离线（无网络状态）应用，只需要创建一个 <code>cache manifest</code> 缓存清单文件。</p>
-<blockquote>
-<p>作用：</p>
-<ol>
-<li>可配置需要缓存的资源；</li>
-<li>网络无连接应用仍可用；</li>
-<li>本地读取缓存资源，提升访问速度，增强用户体验；</li>
-<li>减少请求，缓解服务器负担。</li>
-</ol>
-</blockquote>
-<p>缓存清单文件中列出了浏览器应缓存，以供离线访问的资源。推荐使用 <code>.appcache</code>作为后缀名，另外还要添加MIME类型。</p>
-<blockquote>
-<p>缓存清单文格式：</p>
-<ol>
-<li>顶行写CACHE MANIFEST</li>
-<li>CACHE: 换行 指定我们需要缓存的静态资源，如.css、image、js等</li>
-<li>NETWORK: 换行 指定需要在线访问的资源，可使用通配符</li>
-<li>FALLBACK: 换行 当被缓存的文件找不到时的备用资源</li>
-</ol>
-</blockquote>
-<p>使用方式：</p>
-<ol>
-<li><p>创建一个名为 <code>demo.appcache</code>的文件</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">CACHE MANIFEST</span><br><span class="line"></span><br><span class="line"><span class="comment">#要缓存的文件</span></span><br><span class="line">CACHE:</span><br><span class="line">    images/img1.jpg</span><br><span class="line">    images/img2.jpg</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#指定必须联网才能访问的文件</span></span><br><span class="line">NETWORK:</span><br><span class="line">     images/img3.jpg</span><br><span class="line">     images/img4.jpg</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#当前页面无法访问是回退的页面</span></span><br><span class="line">FALLBACK:</span><br><span class="line">    404.html</span><br></pre></td></tr></table></figure>
-
-
-</li>
-<li><p>在需要应用缓存在页面的根元素(html)里，添加属性manifest&#x3D;”demo.appcache”。</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">manifest</span>=<span class="string">&quot;01.appcache&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;http://img.smyhvae.com/2016040101.jpg&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
-</ol>
-]]></content>
-      <categories>
-        <category>计算机</category>
-      </categories>
-      <tags>
-        <tag>web</tag>
-        <tag>HTML5</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>小葱拌豆腐</title>
-    <url>/karma/76252650.html</url>
-    <content><![CDATA[<p><img src="https://s.boohee.cn/house/upload_food/2016/7/12/big_photo_url_c90600b67fab47da9d8e0fde1421bb8b.jpg" alt="小葱拌豆腐"></p>
-<span id="more"></span>
-
-<h1 id="材料"><a href="#材料" class="headerlink" title="材料"></a>材料</h1><table>
-<thead>
-<tr>
-<th align="left">名称</th>
-<th align="left">剂量</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">内脂豆腐</td>
-<td align="left">1盒</td>
-</tr>
-<tr>
-<td align="left">小米辣</td>
-<td align="left">适量</td>
-</tr>
-<tr>
-<td align="left">香菜</td>
-<td align="left">适量</td>
-</tr>
-<tr>
-<td align="left">葱花</td>
-<td align="left">适量</td>
-</tr>
-<tr>
-<td align="left">蒜末</td>
-<td align="left">3瓣</td>
-</tr>
-<tr>
-<td align="left">盐</td>
-<td align="left">适量</td>
-</tr>
-<tr>
-<td align="left">生抽</td>
-<td align="left">2勺</td>
-</tr>
-<tr>
-<td align="left">陈醋</td>
-<td align="left">2勺</td>
-</tr>
-<tr>
-<td align="left">香油</td>
-<td align="left">适量</td>
-</tr>
-<tr>
-<td align="left">辣椒油</td>
-<td align="left">适量</td>
-</tr>
-</tbody></table>
-<h1 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h1><ol>
-<li>内脂豆腐一块，倒掉多余水分，放入盘中，用刀划成小块</li>
-<li>葱花蒜末适量，香菜切段，小米辣切圈（没有可不放）</li>
-<li>准备一个小碗，依次加入生抽2勺、陈醋2勺、辣椒油适量、盐适量、香油适量</li>
-<li>将入葱花、蒜末、香菜、小米辣倒入小碗搅拌拌匀</li>
-<li>小碗中的料汁淋在豆腐上即可</li>
-</ol>
-]]></content>
-      <categories>
-        <category>下厨房</category>
-      </categories>
-      <tags>
-        <tag>凉菜</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>旅行游记之昆明</title>
-    <url>/karma/e6fbdd14.html</url>
-    <content><![CDATA[<img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20230409202742776.png" alt="云南游记" style="zoom:50%;" />
-
-<span id="more"></span>
-
-<h1 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h1><ul>
-<li><p><strong>规划</strong>：不要忘记xxx，不要赶不上xxx，🙅</p>
-</li>
-<li><p><strong>天气</strong>：昆明紫外线强，气候多变，昼夜温差大</p>
-</li>
-<li><p><strong>玉龙雪山</strong>：高海拔、票难购、跟团行</p>
-</li>
-</ul>
-<h1 id="携带物品"><a href="#携带物品" class="headerlink" title="携带物品"></a>携带物品</h1><ul>
-<li>口罩😷</li>
-<li>纸巾 🧻</li>
-<li>雨伞 🌂</li>
-<li>墨镜 🕶️</li>
-<li>水杯（德尔玛烧水壶、保温杯）🍺</li>
-<li>药品💊（感冒药、胃药）</li>
-<li>遮阳帽 🎩</li>
-<li>防晒霜 🧴</li>
-<li>洗漱用品（毛巾、洗面奶、面霜）</li>
-<li>换洗衣物（冲锋衣、长袖、长裤）👔</li>
-<li>羽绒服（玉龙雪山）</li>
-<li>身份证 🆔</li>
-<li>现金💰</li>
-<li>手机 📱</li>
-<li>电脑 💻</li>
-<li>充电宝</li>
-<li>充电器 🔋</li>
-<li>自拍杆 🤳</li>
-<li>行李箱 🧳✖️ 2</li>
-</ul>
-<h1 id="游玩计划"><a href="#游玩计划" class="headerlink" title="游玩计划"></a>游玩计划</h1><table>
-<thead>
-<tr>
-<th align="left"></th>
-<th align="left">04-27</th>
-<th align="left">04-28</th>
-<th align="left">04-29</th>
-<th align="left">04-30</th>
-<th align="left">05-01</th>
-<th align="left">05-02</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">早上</td>
-<td align="left">♨️</td>
-<td align="left">♨️</td>
-<td align="left">早餐🥣<br /><strong>玉龙雪山跟团-冰川索道套餐</strong></td>
-<td align="left">早餐🥣</td>
-<td align="left">♨️</td>
-<td align="left">♨️</td>
-</tr>
-<tr>
-<td align="left">上午（8点～12点）</td>
-<td align="left">🧱</td>
-<td align="left">11:00 吃饭🍚</td>
-<td align="left">🚄昆明站-大理站（2h 07:00-21:00）</td>
-<td align="left">玉龙雪山🏔️</td>
-<td align="left">11:00  吃饭🍚<br /><strong>寄行李</strong></td>
-<td align="left">吃饭🍚</td>
-</tr>
-<tr>
-<td align="left">中午（12点～14点）</td>
-<td align="left">🧱</td>
-<td align="left">1. 翠湖公园    1h<br />2. 云南大学    1h</td>
-<td align="left">1. <strong>存行李</strong><br />2. 吃饭🍚</td>
-<td align="left">玉龙雪山🏔️</td>
-<td align="left">丽江古镇</td>
-<td align="left">✈️12:20 — 16:00</td>
-</tr>
-<tr>
-<td align="left">下午（14点～19点）</td>
-<td align="left">🧱</td>
-<td align="left">3. 陆军讲武堂 1h<br />4. <strong>滇池</strong>            3h+1h（11公里）</td>
-<td align="left">3. 洱海  3h+1h<br />4. 大理古城 2h</td>
-<td align="left">玉龙雪山🏔️</td>
-<td align="left">束河古镇<br /><strong>取行李</strong></td>
-<td align="left">回家🏠</td>
-</tr>
-<tr>
-<td align="left">晚上</td>
-<td align="left">1. ✈️22:20 — 01:55（T+1）<br />2. 住宿（翠湖公园附近）3:00（T+1）</td>
-<td align="left">5. 金马碧鸡坊   2h<br />6. 住宿（翠湖公园附近）</td>
-<td align="left">5. 吃饭🍚<br />6. <strong>取行李</strong><br />7. 🚄大理站-丽江站（D8135 20:15-21:53）<br />8. 住宿（丽江古城附近）<br />9. 准备上玉龙雪山物资（高热量食品、热水、氧气罐）</td>
-<td align="left">吃饭🍚<br />住宿（丽江古城附近）</td>
-<td align="left">吃饭🍚<br />🚄丽江站-昆明站（Y754 19:00 - 06:44 T+1）</td>
-<td align="left">♨️</td>
-</tr>
-</tbody></table>
-<h2 id="昆明"><a href="#昆明" class="headerlink" title="昆明"></a>昆明</h2><ul>
-<li><p>翠湖公园</p>
-<blockquote>
-<p>特点：名人故居、景色宜人</p>
-<p>距市中心：步行</p>
-<p>建议游玩时间：1h</p>
-<p>门票：免费</p>
-</blockquote>
-</li>
-<li><p>陆军讲武堂</p>
-<blockquote>
-<p>特点：近代著名军事学校、培养朱德、叶剑英等军事家。亮黄色民国建筑</p>
-<p>距市中心：步行（翠湖公园西侧）</p>
-<p>建议游玩时间：1h</p>
-<p>门票：免费</p>
-<p>开放时间：周二-周日</p>
-</blockquote>
-</li>
-<li><p>云南大学</p>
-<blockquote>
-<p>特点：百年历史著名学府，“会泽百家，至公天下”</p>
-<p>距市中心：步行</p>
-<p>门票：免费</p>
-<p>建议游玩时间：1h</p>
-</blockquote>
-</li>
-<li><p>金马碧鸡坊</p>
-<blockquote>
-<p>特点：商业街</p>
-<p>距市中心：</p>
-<p>门票：免费</p>
-<p>建议游玩时间：</p>
-</blockquote>
-</li>
-<li><p>滇池</p>
-<blockquote>
-<p>特点：云南省最大淡水湖，有“高原明珠”之称</p>
-<p>距市中心：11公里</p>
-<p>门票：免费</p>
-<p>建议游玩时间：2～3h</p>
-</blockquote>
-</li>
-<li><p>石林</p>
-<blockquote>
-<p>特点：石灰岩地貌、石林景观</p>
-<p>距市中心：30公里</p>
-<p>门票：130元</p>
-<p>建议游玩时间：3～4h</p>
-<p>开放时间：07:30-17:30(全天)；停止入场时间:17:30 (1月1日-12月31日 周一-周日)</p>
-</blockquote>
-</li>
-</ul>
-<h2 id="大理"><a href="#大理" class="headerlink" title="大理"></a>大理</h2><ul>
-<li><p>洱海</p>
-<blockquote>
-<p>特点：云南第一湖</p>
-<p>距市中心：50公里</p>
-<p>门票：免费</p>
-<p>建议游玩时间：2～3h<br>游玩方式：租车环游洱海</p>
-</blockquote>
-</li>
-<li><p>大理古城</p>
-<blockquote>
-<p>特点：古代南诏国和大理的都城</p>
-<p>距市中心：15公里</p>
-<p>门票：免费</p>
-<p>建议游玩时间：2～3h</p>
-</blockquote>
-</li>
-</ul>
-<h2 id="丽江"><a href="#丽江" class="headerlink" title="丽江"></a>丽江</h2><ul>
-<li><p>玉龙雪山</p>
-<blockquote>
-<p>特点：以险、奇、美、秀著称于世，气势磅礴，玲珑秀丽</p>
-<p>距市中心：25公里</p>
-<p>门票：门票（进山费）、大索道</p>
-<p>建议游玩时间：2～4h</p>
-</blockquote>
-<img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20230409232553381.png" alt="image-20230409232553381" style="zoom:50%;" />
-</li>
-<li><p>束河古镇</p>
-<blockquote>
-<p>特点：丽江纳西文化代表</p>
-<p>距市中心：5公里</p>
-<p>门票：40元</p>
-<p>建议游玩时间：1～2h</p>
-</blockquote>
-</li>
-<li><p>丽江古城</p>
-<blockquote>
-<p>特点：纳西风情、心灵故乡</p>
-<p>距市中心：5公里</p>
-<p>门票：30元</p>
-<p>建议游玩时间：2～3h</p>
-</blockquote>
-</li>
-</ul>
-<h1 id="花销"><a href="#花销" class="headerlink" title="花销"></a>花销</h1><table>
-<thead>
-<tr>
-<th align="left">日期</th>
-<th align="left">美食</th>
-<th align="left">交通</th>
-<th align="left">住宿</th>
-<th align="left">景点</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">2023-04-27</td>
-<td align="left"></td>
-<td align="left">航班✈️ 2675元</td>
-<td align="left">昆明🏨 145元</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">2023-04-28</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">昆明🏨 145元</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">2023-04-29</td>
-<td align="left"></td>
-<td align="left">🚄昆明站—大理站 285元<br />🚄大理站—丽江站 155元</td>
-<td align="left">丽江🏨 175元</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">2023-04-30</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">丽江🏨 175元</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">2023-05-01</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">🚄 丽江站—昆明站 255元</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">2023-05-02</td>
-<td align="left"></td>
-<td align="left">航班✈️ 2675元</td>
-<td align="left">🏠</td>
-<td align="left"></td>
-</tr>
-</tbody></table>
-]]></content>
-      <categories>
-        <category>生活</category>
-      </categories>
-      <tags>
-        <tag>旅行</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>CSS</title>
     <url>/karma/ee69e452.html</url>
     <content><![CDATA[<img src="https://raw.githubusercontent.com/Karma1996/Picture/master/v2-a86dce4fef5c111f0db7e3fb291dd83f_720w.jpg" alt="CSS"  />
@@ -1371,9 +607,829 @@
         <category>计算机</category>
       </categories>
       <tags>
-        <tag>HTML5</tag>
         <tag>Web</tag>
         <tag>HTML</tag>
+        <tag>HTML5</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>HTML5</title>
+    <url>/karma/98f3a6d9.html</url>
+    <content><![CDATA[<img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220603114847621.png" alt="What is HTML5" style="zoom:67%;" />
+
+<span id="more"></span>
+
+<h1 id="HTML5发展"><a href="#HTML5发展" class="headerlink" title="HTML5发展"></a>HTML5发展</h1><table>
+<thead>
+<tr>
+<th align="center">年份</th>
+<th align="center">大事记</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1991</td>
+<td align="center">HTML</td>
+</tr>
+<tr>
+<td align="center">1994</td>
+<td align="center">HTML2</td>
+</tr>
+<tr>
+<td align="center">1996</td>
+<td align="center">CSS1+JavaScript</td>
+</tr>
+<tr>
+<td align="center">1997</td>
+<td align="center">HTML4</td>
+</tr>
+<tr>
+<td align="center">1998</td>
+<td align="center">CSS2</td>
+</tr>
+<tr>
+<td align="center">2000</td>
+<td align="center">XHTML</td>
+</tr>
+<tr>
+<td align="center">2002</td>
+<td align="center">Tableless Web Design（表格布局）</td>
+</tr>
+<tr>
+<td align="center">2005</td>
+<td align="center">AJAX</td>
+</tr>
+<tr>
+<td align="center">2009</td>
+<td align="center">HTML5</td>
+</tr>
+<tr>
+<td align="center">2014</td>
+<td align="center">HTLML5 Finalized</td>
+</tr>
+</tbody></table>
+<p>2002年的表格布局逐渐被淘汰；2009年就已经退出了HTML5的草案，直到2014年才有定稿，因为有移动端的推动。H5草案的前身叫：<strong>Web Application</strong>，最早由 <a href="https://baike.baidu.com/item/WHATWG/5803339?fr=aladdin">WHATWG</a> 这个组织在2004年提出。2007年被<strong>W3C</strong>组织接纳，并在2008-01-22发布HTML5的第一个草案。</p>
+<p>HTML5作为HTML标记语言的最新版本，它制定了Web应用开发的一系列标准，成为第一个将Web作为应用开发平台的HTML语言。</p>
+<p><strong>HTML5广义概念</strong>：HTML5代表浏览器端技术的一个发展阶段。在这个阶段，浏览器的呈现技术得到了飞跃发展和广泛支持，它包括：HTML5、CSS3、JavaScript API在内的一套技术组合。是新一代开发<strong>Web富客户端（具有很强交互性和体验的客户端程序）</strong>应用程序的整体解决方案。</p>
+<h1 id="新特性"><a href="#新特性" class="headerlink" title="新特性"></a>新特性</h1><ul>
+<li>HTML<ul>
+<li>标签<ul>
+<li>更语义化标签</li>
+<li>应用程序标签</li>
+</ul>
+</li>
+<li>属性<ul>
+<li>链接关系描述</li>
+<li>结构数据标记</li>
+<li>ARIA</li>
+<li>自定义属性</li>
+</ul>
+</li>
+<li>智能表单<ul>
+<li>新的表单类型</li>
+<li>虚拟键盘适配</li>
+</ul>
+</li>
+<li>网页多媒体<ul>
+<li>音频</li>
+<li>视频</li>
+<li>字幕</li>
+</ul>
+</li>
+<li>Canvas<ul>
+<li>2D</li>
+<li>3D（WebGL）</li>
+</ul>
+</li>
+<li>SVG</li>
+</ul>
+</li>
+<li>CSS<ul>
+<li>New Selector</li>
+<li>Web Fonts</li>
+<li>Text Styles</li>
+<li>Opacity</li>
+<li>HSL Color</li>
+<li>Rounded Corners</li>
+<li>Gradients</li>
+<li>Shadows</li>
+<li>Background Enhancements</li>
+<li>Border Image</li>
+<li>Flexible Box Model</li>
+<li>Transforms</li>
+<li>Transitions</li>
+<li>Animations</li>
+<li>Ect.</li>
+</ul>
+</li>
+<li>JavaScript API<ul>
+<li>核心平台提升<ul>
+<li>新的选择器</li>
+<li>Element.classList</li>
+<li>访问历史API</li>
+<li>全屏API</li>
+</ul>
+</li>
+<li>网页存储<ul>
+<li>Application Cache</li>
+<li>localStorage</li>
+<li>sessionStorage</li>
+<li>WebSQL</li>
+<li>IndexedDB</li>
+</ul>
+</li>
+<li>设备信息访问<ul>
+<li>网络状态</li>
+<li>硬件访问</li>
+<li>设备方向</li>
+<li>地理围栏</li>
+</ul>
+</li>
+<li>拖放操作<ul>
+<li>网页内拖放</li>
+<li>桌面拖入</li>
+<li>桌面拖出</li>
+</ul>
+</li>
+<li>文件<ul>
+<li>文件系统API</li>
+<li>FileReader</li>
+</ul>
+</li>
+<li>网络访问<ul>
+<li>XMLHttpRequest</li>
+<li>fetch</li>
+<li>WebSocket</li>
+</ul>
+</li>
+<li>多线程</li>
+<li>桌面通知</li>
+</ul>
+</li>
+</ul>
+<h2 id="语义化的标签"><a href="#语义化的标签" class="headerlink" title="语义化的标签"></a>语义化的标签</h2><p>语义标签<code>&lt;p&gt;</code>表示一个段落、<code>&lt;ul&gt;</code>表示一个无序列表。标签语义化的作用：</p>
+<ul>
+<li>便于开发者阅读和写出更优雅的代码</li>
+<li>有利于浏览器或事网络爬虫解析，从而更好分析内容</li>
+<li>更好的搜索引擎优化</li>
+</ul>
+<p>HTML的职责是描述一块内容是什么，它的外观应该由CSS来决定。</p>
+<p>传统网页布局：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;header&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">&quot;nav&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;main&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;article&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;aside&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;footer&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>H5的经典网页布局：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">header</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">&quot;nav&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">header</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;main&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">article</span>&gt;</span><span class="tag">&lt;/<span class="name">article</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">aside</span>&gt;</span><span class="tag">&lt;/<span class="name">aside</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">footer</span>&gt;</span><span class="tag">&lt;/<span class="name">footer</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="新增的表单类型"><a href="#新增的表单类型" class="headerlink" title="新增的表单类型"></a>新增的表单类型</h3><ul>
+<li>email：只能输入email格式，自动带有验证功能</li>
+<li>tel：手机号</li>
+<li>url：只能输入url格式</li>
+<li>number：只能输入数字</li>
+<li>search：搜索框</li>
+<li>range：滑动条</li>
+<li>color：拾色器</li>
+<li>time：时间</li>
+<li>date：日期</li>
+<li>datetime：日期时间（兼容性问题）</li>
+<li>month：月份</li>
+<li>week：月份</li>
+</ul>
+<p class="codepen" data-height="300" data-default-tab="result" data-slug-hash="ExQWMog" data-editable="true" data-user="karma1996" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/karma1996/pen/ExQWMog">
+  form</a> by karma (<a href="https://codepen.io/karma1996">@karma1996</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
+
+
+
+<h2 id="拖拽"><a href="#拖拽" class="headerlink" title="拖拽"></a>拖拽</h2><p>在HTML5规范中，我们可以通过为元素增加<code>draggable=&quot;true&quot;</code>来设置此元素是否可以进行拖拽操作，其中图片、链接默认开启拖拽功能。</p>
+<ol>
+<li><p>拖拽元素</p>
+<p>页面中设置了<code>draggable=&quot;true&quot;</code>属性的元素。</p>
+<p>拖拽元素的监听事件：</p>
+<ul>
+<li><code>ondragstart</code>当拖拽开始时调用</li>
+<li><code>ondragleave</code>当鼠标离开拖拽元素时调用</li>
+<li><code>ondragend</code>当拖拽结束时调用</li>
+<li><code>ondrag</code>整个拖拽过程都会调用</li>
+</ul>
+</li>
+<li><p>目标元素</p>
+<p>元素A拖拽到元素B，那么元素B就是目标元素。页面中任何一个元素都可以成为目标元素。</p>
+<p>目标元素的监听事件：</p>
+<ul>
+<li><code>ondragenter</code>当拖拽元素进入时调用</li>
+<li><code>ondragover</code>当拖拽元素停留在目标元素时，就会连续一直触发</li>
+<li><code>ondrop</code>当在目标元素上松开鼠标时调用</li>
+<li><code>ondragleave</code>当鼠标离开目标元素时调用</li>
+</ul>
+<blockquote>
+<p>如果想让拖拽元素在目标元素里做点事情，就必须要在 <code>ondragover()</code> 里加<code>event.preventDefault()</code>这一行代码。</p>
+</blockquote>
+<p class="codepen" data-height="300" data-default-tab="result" data-slug-hash="dydKeKQ" data-editable="true" data-user="karma1996" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/karma1996/pen/dydKeKQ">
+  draggable</a> by karma (<a href="https://codepen.io/karma1996">@karma1996</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script></li>
+</ol>
+<h2 id="历史"><a href="#历史" class="headerlink" title="历史"></a>历史</h2><p>HTML5中可以通过<code>window.history</code>操作访问历史状态，让一个页面可以有多个历史状态<code>window.history</code>对象可以让我们管理历史记录，可用于但页面应用，无刷新改变网页内容。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">window</span>.<span class="property">history</span>.<span class="title function_">forward</span>(); <span class="comment">//前进</span></span><br><span class="line"><span class="variable language_">window</span>.<span class="property">history</span>.<span class="title function_">back</span>(); <span class="comment">// 后退</span></span><br><span class="line"><span class="variable language_">window</span>.<span class="property">history</span>.<span class="title function_">go</span>(); <span class="comment">// 刷新</span></span><br><span class="line"><span class="variable language_">window</span>.<span class="property">history</span>.<span class="title function_">go</span>(n); <span class="comment">// n=1表示前进、n=-1表示后退、n=0表示刷新。如果移动的位置超出了访问历史的边界，会默认失败，不会报错。</span></span><br><span class="line">history.<span class="property">pushState</span>; <span class="comment">//放入历史中的状态数据，设置title（兼容性不好）</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="地理位置"><a href="#地理位置" class="headerlink" title="地理位置"></a>地理位置</h2><p>HTML5规范中，增加了获取用户地理信息的API，这样使得我们可以基于用户位置开发互联网应用，即<strong>基于位置服务LBS</strong>（Location Base Service）。</p>
+<p>获取地理位置信息方式：</p>
+<table>
+<thead>
+<tr>
+<th align="center">数据源</th>
+<th align="center">优点</th>
+<th align="center">缺点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">IP地址</td>
+<td align="center">任何地方都可用，在服务器端处理</td>
+<td align="center">精确到城市级别（法规原因），运算代价大</td>
+</tr>
+<tr>
+<td align="center">Wi-Fi</td>
+<td align="center">精确<br />可在室内使用<br />简单、快捷</td>
+<td align="center">Wi-Fi点介入少的地方无法使用</td>
+</tr>
+<tr>
+<td align="center">手机信号</td>
+<td align="center">相当精确<br />可在室内使用<br />简单、快捷</td>
+<td align="center">需要设备能够访问</td>
+</tr>
+<tr>
+<td align="center">GPS</td>
+<td align="center">很精确</td>
+<td align="center">定位时间长、耗电量大<br />室内效果差<br />需要额外硬件设备支持</td>
+</tr>
+<tr>
+<td align="center">用户自定义</td>
+<td align="center">用户自行输入，比自动检测快</td>
+<td align="center">可能很不精确，当用户更换位置后</td>
+</tr>
+</tbody></table>
+<p>Html5 Geolocation规范提供了一套保护用户隐私的机制。必须先得到用户许可，才能获取用户的位置信息。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">navigator.<span class="title function_">getCurrentPosition</span>(successCallback, errorCallback, options) <span class="comment">// 获取当前地理信息</span></span><br><span class="line">navigator.<span class="title function_">watchPosition</span>(successCallback, errorCallback, options) <span class="comment">// 重复获取当前地理信息</span></span><br><span class="line">navigator.<span class="title function_">clearWatch</span>() <span class="comment">// 停止 watchPosition() 方法</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>当成功获取地理信息后，会调用successCallback，并返回一个包含位置信息的对象position: Coords（即坐标）。当获取地理信息失败后，会调用errorCallback，并返回错误信息error。可选参数options对象可以调整位置信息数据的收集方式。</p>
+</blockquote>
+<h2 id="全屏"><a href="#全屏" class="headerlink" title="全屏"></a>全屏</h2><blockquote>
+<p>HTML5规范用户自定义网页上任意元素全屏显示</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title function_">requestFullscreen</span>()   <span class="comment">// 让元素开启全屏显示</span></span><br><span class="line"><span class="title function_">cancleFullscreen</span>()    <span class="comment">// 让元素关闭全屏显示</span></span><br><span class="line"><span class="variable language_">document</span>.<span class="property">fullScreen</span>		<span class="comment">// 检测当前元素是否处于全屏状态</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="存储"><a href="#存储" class="headerlink" title="存储"></a>存储</h2><p>随着互联网的快速发展，基于网页的应用越来越普遍，同时也变的越来越复杂，为了满足各种各样的需求，会经常性在本地存储大量的数据，传统方式我们以document.cookie来进行存储的，但是由于其存储大小只有4k左右，并且解析也相当的复杂，给开发带来诸多不便，HTML5规范则提出解决方案。</p>
+<ol>
+<li><p>会话存储</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">window</span>.<span class="property">sessionStorage</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>保存在内存中</li>
+<li>生命周期为关闭浏览器窗口</li>
+<li>在同一个窗口下数据共享</li>
+</ul>
+</li>
+<li><p>本地存储</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">window</span>.<span class="property">localStorage</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>有可能在内存中，也有可能在硬盘中</li>
+<li>永久生效，可手动清理</li>
+<li>可以多窗口共享</li>
+</ul>
+</li>
+</ol>
+<p>相对于传统cookie方式，新的方式设置、读取更方便；容量较大（sessionStorage约5M、localStorage约20M）。两者在存储数据时，只能存储字符串，可以将对象<code>JSON.stringfy()</code>编码后存储。</p>
+<p>常见API</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title function_">setItem</span>(key, value); <span class="comment">// 设置item，无则新增，有则更新</span></span><br><span class="line"></span><br><span class="line"><span class="title function_">getItem</span>(key); <span class="comment">// 读取存储内容</span></span><br><span class="line"></span><br><span class="line"><span class="title function_">removeItem</span>(key); <span class="comment">// 删除存储内容</span></span><br><span class="line"></span><br><span class="line"><span class="title function_">clear</span>(); <span class="comment">// 清空所有存储内容</span></span><br><span class="line"></span><br><span class="line"><span class="title function_">key</span>(n); <span class="comment">// 根据索引值来获取存储内容</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="网络状态"><a href="#网络状态" class="headerlink" title="网络状态"></a>网络状态</h2><p>可以通过注册监听事件来感知用户网络连接情况</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">window</span>.<span class="title function_">addEventListener</span>(<span class="string">&#x27;online&#x27;</span>, <span class="keyword">function</span> (<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="title function_">alert</span>(<span class="string">&#x27;网络连接建立！&#x27;</span>);</span></span><br><span class="line"><span class="language-javascript">    &#125;);</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">window</span>.<span class="title function_">addEventListener</span>(<span class="string">&#x27;offline&#x27;</span>, <span class="keyword">function</span> (<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="title function_">alert</span>(<span class="string">&#x27;网络连接断开！&#x27;</span>);</span></span><br><span class="line"><span class="language-javascript">    &#125;)</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="应用缓存"><a href="#应用缓存" class="headerlink" title="应用缓存"></a>应用缓存</h2><p>HTML5中可以轻松的构建一个离线（无网络状态）应用，只需要创建一个 <code>cache manifest</code> 缓存清单文件。</p>
+<blockquote>
+<p>作用：</p>
+<ol>
+<li>可配置需要缓存的资源；</li>
+<li>网络无连接应用仍可用；</li>
+<li>本地读取缓存资源，提升访问速度，增强用户体验；</li>
+<li>减少请求，缓解服务器负担。</li>
+</ol>
+</blockquote>
+<p>缓存清单文件中列出了浏览器应缓存，以供离线访问的资源。推荐使用 <code>.appcache</code>作为后缀名，另外还要添加MIME类型。</p>
+<blockquote>
+<p>缓存清单文格式：</p>
+<ol>
+<li>顶行写CACHE MANIFEST</li>
+<li>CACHE: 换行 指定我们需要缓存的静态资源，如.css、image、js等</li>
+<li>NETWORK: 换行 指定需要在线访问的资源，可使用通配符</li>
+<li>FALLBACK: 换行 当被缓存的文件找不到时的备用资源</li>
+</ol>
+</blockquote>
+<p>使用方式：</p>
+<ol>
+<li><p>创建一个名为 <code>demo.appcache</code>的文件</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">CACHE MANIFEST</span><br><span class="line"></span><br><span class="line"><span class="comment">#要缓存的文件</span></span><br><span class="line">CACHE:</span><br><span class="line">    images/img1.jpg</span><br><span class="line">    images/img2.jpg</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#指定必须联网才能访问的文件</span></span><br><span class="line">NETWORK:</span><br><span class="line">     images/img3.jpg</span><br><span class="line">     images/img4.jpg</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#当前页面无法访问是回退的页面</span></span><br><span class="line">FALLBACK:</span><br><span class="line">    404.html</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>在需要应用缓存在页面的根元素(html)里，添加属性manifest&#x3D;”demo.appcache”。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">manifest</span>=<span class="string">&quot;01.appcache&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;http://img.smyhvae.com/2016040101.jpg&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <categories>
+        <category>计算机</category>
+      </categories>
+      <tags>
+        <tag>web</tag>
+        <tag>HTML5</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>java开发环境搭建</title>
+    <url>/karma/ff3c284c.html</url>
+    <content><![CDATA[<img src="https://raw.githubusercontent.com/Karma1996/Picture/master/java-logo-png.png" alt="This is Java"  />
+
+<span id="more"></span>
+
+<h1 id="windows"><a href="#windows" class="headerlink" title="windows"></a>windows</h1><h2 id="系统信息"><a href="#系统信息" class="headerlink" title="系统信息"></a>系统信息</h2><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/20220504150058.png" alt="img" style="zoom:67%;" />
+
+<h2 id="jdk下载"><a href="#jdk下载" class="headerlink" title="jdk下载"></a><a href="https://www.oracle.com/java/technologies/downloads/#java8-windows">jdk下载</a></h2><p><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220504144453754.png" alt="image-20220504144453754"></p>
+<h2 id="jdk配置"><a href="#jdk配置" class="headerlink" title="jdk配置"></a>jdk配置</h2><ol>
+<li><p>制作压缩包</p>
+<p>orcale没有为windows系统提供<code>*.tar.gz</code>格式jdk，可以通过exe文件转换得到。具体方法参考链接：<a href="https://www.oracle.com/java/technologies/downloads/#java8-windows">https://www.oracle.com/java/technologies/downloads/#java8-windows</a></p>
+<img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220504144758781.png" alt="image-20220504144758781" style="zoom: 50%;" />
+</li>
+<li><p>环境变量配置</p>
+<img src="https://raw.githubusercontent.com/Karma1996/Picture/master/20220504150427.png" alt="img" style="zoom:67%;" />
+
+<blockquote>
+<p>增加系统变量：<code>JAVA_8</code>、<code>JAVA_HOME</code>；编辑系统变量<code>Path</code>，追加<code>%JAVA_HOME%\bin</code></p>
+</blockquote>
+</li>
+<li><p>验证配置</p>
+</li>
+</ol>
+<img src="https://raw.githubusercontent.com/Karma1996/Picture/master/20220504150159.png" alt="img" style="zoom:67%;" />
+
+<h1 id="linux"><a href="#linux" class="headerlink" title="linux"></a>linux</h1><h2 id="系统信息-1"><a href="#系统信息-1" class="headerlink" title="系统信息"></a>系统信息</h2><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/20220504142103.png" alt="img" style="zoom: 67%;" />
+
+<h2 id="jdk下载-1"><a href="#jdk下载-1" class="headerlink" title="jdk下载"></a><a href="https://www.oracle.com/java/technologies/javase/javase8u211-later-archive-downloads.html">jdk下载</a></h2><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220504134741441.png" alt="image-20220504134741441" style="zoom:50%;" />
+
+<p>选择适合自己系统架构的版本，文件格式建议选择<code>*.tar.gz</code>（可支持多版本切换）。</p>
+<h2 id="jdk配置-1"><a href="#jdk配置-1" class="headerlink" title="jdk配置"></a>jdk配置</h2><ol>
+<li><p>解压缩到指定路径</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">x jdk-8u331-linux-x64.tar.gz</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/20220504142256.png" alt="img"></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo <span class="built_in">mv</span> jdk1.8.0_331 /opt/jdk8u331</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/20220504142659.png" alt="img"></p>
+</li>
+<li><p>环境变量配置</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># PATH</span></span><br><span class="line"><span class="built_in">export</span> JAVA8=<span class="string">&#x27;/opt/jdk8u331&#x27;</span></span><br><span class="line"><span class="built_in">export</span> JAVA_HOME=<span class="variable">$JAVA8</span></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$&#123;PATH&#125;</span>:<span class="variable">$&#123;JAVA_HOME&#125;</span>/bin</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>验证配置</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~</span><br><span class="line">java -version</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/20220504142736.png" alt="img"></p>
+</li>
+</ol>
+<h1 id="macOS"><a href="#macOS" class="headerlink" title="macOS"></a>macOS</h1><h2 id="系统信息-2"><a href="#系统信息-2" class="headerlink" title="系统信息"></a>系统信息</h2><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220503180724598.png" alt="image-20220503180724598" style="zoom: 67%;" />
+
+<p>为完全释放M1芯片性能，故选用<a href="https://www.azul.com/downloads/?package=jdk#download-openjdk">zaul</a>提供的OpenJDK。</p>
+<p><em>非必要条件</em>：<a href="https://ohmyz.sh/">oh-my-zsh</a></p>
+<h2 id="jdk下载-2"><a href="#jdk下载-2" class="headerlink" title="jdk下载"></a><a href="https://www.azul.com/downloads/?package=jdk#download-openjdk">jdk下载</a></h2><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220503181307987.png" alt="image-20220503181307987" style="zoom: 50%;" />
+
+<p>建议Java Package选择<code>JDK FX</code>，下载格式选择<code>.tar.gz</code>（可支持多版本切换）。</p>
+<h2 id="jdk配置-2"><a href="#jdk配置-2" class="headerlink" title="jdk配置"></a>jdk配置</h2><ol>
+<li><p>解压缩下载包到指定路径</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">-- 解压缩</span><br><span class="line">x zulu8.62.0.19-ca-fx-jdk8.0.332-macosx_aarch64.tar.gz</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220503191722365.png" alt="image-20220503191722365"></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mv</span> zulu-8.jdk ~/Library/Java/JavaVirtualMachines/jdk8u332</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220503191919928.png" alt="image-20220503191919928"></p>
+</li>
+<li><p>环境变量配置</p>
+<p>~&#x2F;.zshrc文件追加配置</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># PATH</span></span><br><span class="line"><span class="built_in">export</span> JAVA8=/Users/karma/Library/Java/JavaVirtualMachines/jdk8u332/Contents/Home</span><br><span class="line"><span class="built_in">export</span> JAVA_HOME=<span class="variable">$&#123;JAVA8&#125;</span></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$&#123;PATH&#125;</span>:<span class="variable">$&#123;JAVA_HOME&#125;</span>/bin</span><br></pre></td></tr></table></figure>
+
+<p>保存文件后，更新配置</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.zshrc</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>验证配置</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~</span><br><span class="line">java -version</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220503193156497.png" alt="image-20220503193156497"></p>
+</li>
+</ol>
+<h2 id="其他问题"><a href="#其他问题" class="headerlink" title="其他问题"></a>其他问题</h2><ol>
+<li><p>无法打开“xxx”，因为Apple无法检查其是否包含恶意软件。</p>
+<img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220503193053338.png" alt="image-20220503193053338" style="zoom:50%;" />
+
+<blockquote>
+<p>打开“系统偏好设置”-&gt;“安全性与隐私”-&gt;“通用”，会看到如下所示的界面，选择“仍要打开”</p>
+</blockquote>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>计算机</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>小葱拌豆腐</title>
+    <url>/karma/76252650.html</url>
+    <content><![CDATA[<p><img src="https://s.boohee.cn/house/upload_food/2016/7/12/big_photo_url_c90600b67fab47da9d8e0fde1421bb8b.jpg" alt="小葱拌豆腐"></p>
+<span id="more"></span>
+
+<h1 id="材料"><a href="#材料" class="headerlink" title="材料"></a>材料</h1><table>
+<thead>
+<tr>
+<th align="left">名称</th>
+<th align="left">剂量</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">内脂豆腐</td>
+<td align="left">1盒</td>
+</tr>
+<tr>
+<td align="left">小米辣</td>
+<td align="left">适量</td>
+</tr>
+<tr>
+<td align="left">香菜</td>
+<td align="left">适量</td>
+</tr>
+<tr>
+<td align="left">葱花</td>
+<td align="left">适量</td>
+</tr>
+<tr>
+<td align="left">蒜末</td>
+<td align="left">3瓣</td>
+</tr>
+<tr>
+<td align="left">盐</td>
+<td align="left">适量</td>
+</tr>
+<tr>
+<td align="left">生抽</td>
+<td align="left">2勺</td>
+</tr>
+<tr>
+<td align="left">陈醋</td>
+<td align="left">2勺</td>
+</tr>
+<tr>
+<td align="left">香油</td>
+<td align="left">适量</td>
+</tr>
+<tr>
+<td align="left">辣椒油</td>
+<td align="left">适量</td>
+</tr>
+</tbody></table>
+<h1 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h1><ol>
+<li>内脂豆腐一块，倒掉多余水分，放入盘中，用刀划成小块</li>
+<li>葱花蒜末适量，香菜切段，小米辣切圈（没有可不放）</li>
+<li>准备一个小碗，依次加入生抽2勺、陈醋2勺、辣椒油适量、盐适量、香油适量</li>
+<li>将入葱花、蒜末、香菜、小米辣倒入小碗搅拌拌匀</li>
+<li>小碗中的料汁淋在豆腐上即可</li>
+</ol>
+]]></content>
+      <categories>
+        <category>下厨房</category>
+      </categories>
+      <tags>
+        <tag>凉菜</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>旅行游记之昆明</title>
+    <url>/karma/e6fbdd14.html</url>
+    <content><![CDATA[<img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20230409202742776.png" alt="云南游记" style="zoom:50%;" />
+
+<span id="more"></span>
+
+<h1 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h1><ul>
+<li><p><strong>规划</strong>：不要忘记xxx，不要赶不上xxx，🙅</p>
+</li>
+<li><p><strong>天气</strong>：昆明紫外线强，气候多变，昼夜温差大</p>
+</li>
+<li><p><strong>玉龙雪山</strong>：高海拔、票难购、跟团行</p>
+</li>
+</ul>
+<h1 id="携带物品"><a href="#携带物品" class="headerlink" title="携带物品"></a>携带物品</h1><ul>
+<li>口罩😷</li>
+<li>纸巾 🧻</li>
+<li>雨伞 🌂</li>
+<li>墨镜 🕶️</li>
+<li>水杯（德尔玛烧水壶、保温杯）🍺</li>
+<li>药品💊（感冒药、胃药）</li>
+<li>遮阳帽 🎩</li>
+<li>防晒霜 🧴</li>
+<li>洗漱用品（毛巾、洗面奶、面霜）</li>
+<li>换洗衣物（冲锋衣、长袖、长裤）👔</li>
+<li>羽绒服（玉龙雪山）</li>
+<li>身份证 🆔</li>
+<li>现金💰</li>
+<li>手机 📱</li>
+<li>电脑 💻</li>
+<li>充电宝</li>
+<li>充电器 🔋</li>
+<li>自拍杆 🤳</li>
+<li>行李箱 🧳✖️ 2</li>
+</ul>
+<h1 id="游玩计划"><a href="#游玩计划" class="headerlink" title="游玩计划"></a>游玩计划</h1><table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="left">04-27</th>
+<th align="left">04-28</th>
+<th align="left">04-29</th>
+<th align="left">04-30</th>
+<th align="left">05-01</th>
+<th align="left">05-02</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">早上</td>
+<td align="left">♨️</td>
+<td align="left">♨️</td>
+<td align="left">早餐🥣<br /><strong>玉龙雪山跟团-冰川索道套餐</strong></td>
+<td align="left">早餐🥣</td>
+<td align="left">♨️</td>
+<td align="left">♨️</td>
+</tr>
+<tr>
+<td align="left">上午（8点～12点）</td>
+<td align="left">🧱</td>
+<td align="left">11:00 吃饭🍚</td>
+<td align="left">🚄昆明站-大理站（2h 07:00-21:00）</td>
+<td align="left">玉龙雪山🏔️</td>
+<td align="left">11:00  吃饭🍚<br /><strong>寄行李</strong></td>
+<td align="left">吃饭🍚</td>
+</tr>
+<tr>
+<td align="left">中午（12点～14点）</td>
+<td align="left">🧱</td>
+<td align="left">1. 翠湖公园    1h<br />2. 云南大学    1h</td>
+<td align="left">1. <strong>存行李</strong><br />2. 吃饭🍚</td>
+<td align="left">玉龙雪山🏔️</td>
+<td align="left">丽江古镇</td>
+<td align="left">✈️12:20 — 16:00</td>
+</tr>
+<tr>
+<td align="left">下午（14点～19点）</td>
+<td align="left">🧱</td>
+<td align="left">3. 陆军讲武堂 1h<br />4. <strong>滇池</strong>            3h+1h（11公里）</td>
+<td align="left">3. 洱海  3h+1h<br />4. 大理古城 2h</td>
+<td align="left">玉龙雪山🏔️</td>
+<td align="left">束河古镇<br /><strong>取行李</strong></td>
+<td align="left">回家🏠</td>
+</tr>
+<tr>
+<td align="left">晚上</td>
+<td align="left">1. ✈️22:20 — 01:55（T+1）<br />2. 住宿（翠湖公园附近）3:00（T+1）</td>
+<td align="left">5. 金马碧鸡坊   2h<br />6. 住宿（翠湖公园附近）</td>
+<td align="left">5. 吃饭🍚<br />6. <strong>取行李</strong><br />7. 🚄大理站-丽江站（D8135 20:15-21:53）<br />8. 住宿（丽江古城附近）<br />9. 准备上玉龙雪山物资（高热量食品、热水、氧气罐）</td>
+<td align="left">吃饭🍚<br />住宿（丽江古城附近）</td>
+<td align="left">吃饭🍚<br />🚄丽江站-昆明站（Y754 19:00 - 06:44 T+1）</td>
+<td align="left">♨️</td>
+</tr>
+</tbody></table>
+<h2 id="昆明"><a href="#昆明" class="headerlink" title="昆明"></a>昆明</h2><ul>
+<li><p>翠湖公园</p>
+<blockquote>
+<p>特点：名人故居、景色宜人</p>
+<p>距市中心：步行</p>
+<p>建议游玩时间：1h</p>
+<p>门票：免费</p>
+</blockquote>
+</li>
+<li><p>陆军讲武堂</p>
+<blockquote>
+<p>特点：近代著名军事学校、培养朱德、叶剑英等军事家。亮黄色民国建筑</p>
+<p>距市中心：步行（翠湖公园西侧）</p>
+<p>建议游玩时间：1h</p>
+<p>门票：免费</p>
+<p>开放时间：周二-周日</p>
+</blockquote>
+</li>
+<li><p>云南大学</p>
+<blockquote>
+<p>特点：百年历史著名学府，“会泽百家，至公天下”</p>
+<p>距市中心：步行</p>
+<p>门票：免费</p>
+<p>建议游玩时间：1h</p>
+</blockquote>
+</li>
+<li><p>金马碧鸡坊</p>
+<blockquote>
+<p>特点：商业街</p>
+<p>距市中心：</p>
+<p>门票：免费</p>
+<p>建议游玩时间：</p>
+</blockquote>
+</li>
+<li><p>滇池</p>
+<blockquote>
+<p>特点：云南省最大淡水湖，有“高原明珠”之称</p>
+<p>距市中心：11公里</p>
+<p>门票：免费</p>
+<p>建议游玩时间：2～3h</p>
+</blockquote>
+</li>
+<li><p>石林</p>
+<blockquote>
+<p>特点：石灰岩地貌、石林景观</p>
+<p>距市中心：30公里</p>
+<p>门票：130元</p>
+<p>建议游玩时间：3～4h</p>
+<p>开放时间：07:30-17:30(全天)；停止入场时间:17:30 (1月1日-12月31日 周一-周日)</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="大理"><a href="#大理" class="headerlink" title="大理"></a>大理</h2><ul>
+<li><p>洱海</p>
+<blockquote>
+<p>特点：云南第一湖</p>
+<p>距市中心：50公里</p>
+<p>门票：免费</p>
+<p>建议游玩时间：2～3h<br>游玩方式：租车环游洱海</p>
+</blockquote>
+</li>
+<li><p>大理古城</p>
+<blockquote>
+<p>特点：古代南诏国和大理的都城</p>
+<p>距市中心：15公里</p>
+<p>门票：免费</p>
+<p>建议游玩时间：2～3h</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="丽江"><a href="#丽江" class="headerlink" title="丽江"></a>丽江</h2><ul>
+<li><p>玉龙雪山</p>
+<blockquote>
+<p>特点：以险、奇、美、秀著称于世，气势磅礴，玲珑秀丽</p>
+<p>距市中心：25公里</p>
+<p>门票：门票（进山费）、大索道</p>
+<p>建议游玩时间：2～4h</p>
+</blockquote>
+<img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20230409232553381.png" alt="image-20230409232553381" style="zoom:50%;" />
+</li>
+<li><p>束河古镇</p>
+<blockquote>
+<p>特点：丽江纳西文化代表</p>
+<p>距市中心：5公里</p>
+<p>门票：40元</p>
+<p>建议游玩时间：1～2h</p>
+</blockquote>
+</li>
+<li><p>丽江古城</p>
+<blockquote>
+<p>特点：纳西风情、心灵故乡</p>
+<p>距市中心：5公里</p>
+<p>门票：30元</p>
+<p>建议游玩时间：2～3h</p>
+</blockquote>
+</li>
+</ul>
+<h1 id="花销"><a href="#花销" class="headerlink" title="花销"></a>花销</h1><table>
+<thead>
+<tr>
+<th align="left">日期</th>
+<th align="left">美食</th>
+<th align="left">交通</th>
+<th align="left">住宿</th>
+<th align="left">景点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">2023-04-27</td>
+<td align="left"></td>
+<td align="left">航班✈️ 2675元</td>
+<td align="left">昆明🏨 145元</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">2023-04-28</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">昆明🏨 145元</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">2023-04-29</td>
+<td align="left"></td>
+<td align="left">🚄昆明站—大理站 285元<br />🚄大理站—丽江站 155元</td>
+<td align="left">丽江🏨 175元</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">2023-04-30</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">丽江🏨 175元</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">2023-05-01</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">🚄 丽江站—昆明站 255元</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">2023-05-02</td>
+<td align="left"></td>
+<td align="left">航班✈️ 2675元</td>
+<td align="left">🏠</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>生活</category>
+      </categories>
+      <tags>
+        <tag>旅行</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>效率工具之jq</title>
+    <url>/karma/a87b4ea2.html</url>
+    <content><![CDATA[<img src="https://raw.githubusercontent.com/Karma1996/Picture/master/man_jq.png" alt="man_jq" style="zoom: 50%;" />
+
+<span id="more"></span>
+
+<h1 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h1><blockquote>
+<p><code>jq</code>用于处理json数据，是一个轻量灵活的命令行工具</p>
+</blockquote>
+<h2 id="常用选项"><a href="#常用选项" class="headerlink" title="常用选项"></a>常用选项</h2><ul>
+<li>-c 紧凑输出json数据</li>
+<li>-e 根据输出结果设置命令退出状态码</li>
+<li>-s 读取所有输入到一个数组</li>
+<li>-r 输出原始字符串，而不是一个json格式</li>
+<li>-C 颜色高亮显示</li>
+<li>-M 单色显示</li>
+<li>-S 排序对象</li>
+<li>–tab 使用tab缩进</li>
+</ul>
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><ol>
+<li><p>mac</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">➜  klog git:(master) ✗ brew install jq</span><br><span class="line"></span><br><span class="line"><span class="comment"># 验证是否成功安装</span></span><br><span class="line">➜  klog git:(master) ✗ jq -V</span><br><span class="line">jq-1.6</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>linux</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">➜  klog git:(master) ✗ yum install jq</span><br><span class="line"></span><br><span class="line"><span class="comment"># 验证是否成功安装</span></span><br><span class="line">➜  klog git:(master) ✗ jq -V</span><br><span class="line">jq-1.6</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h1 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h1><p>准备example.json文件</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">➜  ~ <span class="built_in">echo</span> <span class="string">&#x27;&#123;&quot;ret&quot;:true,&quot;ver&quot;:1,&quot;data&quot;:[&#123;&quot;name&quot;:&quot;张三&quot;,&quot;age&quot;:10,&quot;score&quot;:96&#125;,&#123;&quot;name&quot;:&quot;李四&quot;,&quot;age&quot;:10,&quot;score&quot;:78&#125;,&#123;&quot;name&quot;:&quot;王五&quot;,&quot;age&quot;:10,&quot;score&quot;:84&#125;]&#125;&#x27;</span> &gt; example.json</span><br></pre></td></tr></table></figure>
+
+<h2 id="格式化输出"><a href="#格式化输出" class="headerlink" title="格式化输出"></a>格式化输出</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">➜  ~ <span class="built_in">cat</span> example.json|jq</span><br><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;ret&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="string">&quot;ver&quot;</span>: 1,</span><br><span class="line">  <span class="string">&quot;data&quot;</span>: [</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="string">&quot;name&quot;</span>: <span class="string">&quot;张三&quot;</span>,</span><br><span class="line">      <span class="string">&quot;age&quot;</span>: 10,</span><br><span class="line">      <span class="string">&quot;score&quot;</span>: 96</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="string">&quot;name&quot;</span>: <span class="string">&quot;李四&quot;</span>,</span><br><span class="line">      <span class="string">&quot;age&quot;</span>: 10,</span><br><span class="line">      <span class="string">&quot;score&quot;</span>: 78</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="string">&quot;name&quot;</span>: <span class="string">&quot;王五&quot;</span>,</span><br><span class="line">      <span class="string">&quot;age&quot;</span>: 10,</span><br><span class="line">      <span class="string">&quot;score&quot;</span>: 84</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="提取节点ret"><a href="#提取节点ret" class="headerlink" title="提取节点ret"></a>提取节点ret</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">➜  ~ <span class="built_in">cat</span> example.json|jq .ret</span><br><span class="line"><span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="解析节点data"><a href="#解析节点data" class="headerlink" title="解析节点data"></a>解析节点data</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">➜  ~ <span class="built_in">cat</span> example.json|jq <span class="string">&#x27;.data[]&#x27;</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;name&quot;</span>: <span class="string">&quot;张三&quot;</span>,</span><br><span class="line">  <span class="string">&quot;age&quot;</span>: 10,</span><br><span class="line">  <span class="string">&quot;score&quot;</span>: 96</span><br><span class="line">&#125;</span><br><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;name&quot;</span>: <span class="string">&quot;李四&quot;</span>,</span><br><span class="line">  <span class="string">&quot;age&quot;</span>: 10,</span><br><span class="line">  <span class="string">&quot;score&quot;</span>: 78</span><br><span class="line">&#125;</span><br><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;name&quot;</span>: <span class="string">&quot;王五&quot;</span>,</span><br><span class="line">  <span class="string">&quot;age&quot;</span>: 10,</span><br><span class="line">  <span class="string">&quot;score&quot;</span>: 84</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="提取李四信息"><a href="#提取李四信息" class="headerlink" title="提取李四信息"></a>提取李四信息</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">➜  ~ <span class="built_in">cat</span> example.json|jq <span class="string">&#x27;.data[1]&#x27;</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;name&quot;</span>: <span class="string">&quot;李四&quot;</span>,</span><br><span class="line">  <span class="string">&quot;age&quot;</span>: 10,</span><br><span class="line">  <span class="string">&quot;score&quot;</span>: 78</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="提取李四、王五name"><a href="#提取李四、王五name" class="headerlink" title="提取李四、王五name"></a>提取李四、王五name</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">➜  ~ <span class="built_in">cat</span> example.json|jq <span class="string">&#x27;.data[1:3][].name&#x27;</span></span><br><span class="line"><span class="string">&quot;李四&quot;</span></span><br><span class="line"><span class="string">&quot;王五&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="提取节点data的name和score"><a href="#提取节点data的name和score" class="headerlink" title="提取节点data的name和score"></a>提取节点data的name和score</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">➜  ~ <span class="built_in">cat</span> example.json|jq <span class="string">&#x27;.data[]|&#123;name,score&#125;&#x27;</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;name&quot;</span>: <span class="string">&quot;张三&quot;</span>,</span><br><span class="line">  <span class="string">&quot;score&quot;</span>: 96</span><br><span class="line">&#125;</span><br><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;name&quot;</span>: <span class="string">&quot;李四&quot;</span>,</span><br><span class="line">  <span class="string">&quot;score&quot;</span>: 78</span><br><span class="line">&#125;</span><br><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;name&quot;</span>: <span class="string">&quot;王五&quot;</span>,</span><br><span class="line">  <span class="string">&quot;score&quot;</span>: 84</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="在线工具"><a href="#在线工具" class="headerlink" title="在线工具"></a>在线工具</h1><ul>
+<li><a href="https://jqplay.org/">jq演练场</a></li>
+<li><a href="https://www.json.cn/#">json格式化</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>计算机</category>
+      </categories>
+      <tags>
+        <tag>工具</tag>
       </tags>
   </entry>
 </search>
