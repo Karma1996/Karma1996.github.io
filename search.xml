@@ -198,147 +198,6 @@
       </tags>
   </entry>
   <entry>
-    <title>java开发环境搭建</title>
-    <url>/karma/ff3c284c.html</url>
-    <content><![CDATA[<img src="https://raw.githubusercontent.com/Karma1996/Picture/master/java-logo-png.png" alt="This is Java"  />
-
-<span id="more"></span>
-
-<h1 id="windows"><a href="#windows" class="headerlink" title="windows"></a>windows</h1><h2 id="系统信息"><a href="#系统信息" class="headerlink" title="系统信息"></a>系统信息</h2><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/20220504150058.png" alt="img" style="zoom:67%;" />
-
-<h2 id="jdk下载"><a href="#jdk下载" class="headerlink" title="jdk下载"></a><a href="https://www.oracle.com/java/technologies/downloads/#java8-windows">jdk下载</a></h2><p><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220504144453754.png" alt="image-20220504144453754"></p>
-<h2 id="jdk配置"><a href="#jdk配置" class="headerlink" title="jdk配置"></a>jdk配置</h2><ol>
-<li><p>制作压缩包</p>
-<p>orcale没有为windows系统提供<code>*.tar.gz</code>格式jdk，可以通过exe文件转换得到。具体方法参考链接：<a href="https://www.oracle.com/java/technologies/downloads/#java8-windows">https://www.oracle.com/java/technologies/downloads/#java8-windows</a></p>
-<img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220504144758781.png" alt="image-20220504144758781" style="zoom: 50%;" />
-</li>
-<li><p>环境变量配置</p>
-<img src="https://raw.githubusercontent.com/Karma1996/Picture/master/20220504150427.png" alt="img" style="zoom:67%;" />
-
-<blockquote>
-<p>增加系统变量：<code>JAVA_8</code>、<code>JAVA_HOME</code>；编辑系统变量<code>Path</code>，追加<code>%JAVA_HOME%\bin</code></p>
-</blockquote>
-</li>
-<li><p>验证配置</p>
-</li>
-</ol>
-<img src="https://raw.githubusercontent.com/Karma1996/Picture/master/20220504150159.png" alt="img" style="zoom:67%;" />
-
-<h1 id="linux"><a href="#linux" class="headerlink" title="linux"></a>linux</h1><h2 id="系统信息-1"><a href="#系统信息-1" class="headerlink" title="系统信息"></a>系统信息</h2><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/20220504142103.png" alt="img" style="zoom: 67%;" />
-
-<h2 id="jdk下载-1"><a href="#jdk下载-1" class="headerlink" title="jdk下载"></a><a href="https://www.oracle.com/java/technologies/javase/javase8u211-later-archive-downloads.html">jdk下载</a></h2><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220504134741441.png" alt="image-20220504134741441" style="zoom:50%;" />
-
-<p>选择适合自己系统架构的版本，文件格式建议选择<code>*.tar.gz</code>（可支持多版本切换）。</p>
-<h2 id="jdk配置-1"><a href="#jdk配置-1" class="headerlink" title="jdk配置"></a>jdk配置</h2><ol>
-<li><p>解压缩到指定路径</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">x jdk-8u331-linux-x64.tar.gz</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/20220504142256.png" alt="img"></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo <span class="built_in">mv</span> jdk1.8.0_331 /opt/jdk8u331</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/20220504142659.png" alt="img"></p>
-</li>
-<li><p>环境变量配置</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># PATH</span></span><br><span class="line"><span class="built_in">export</span> JAVA8=<span class="string">&#x27;/opt/jdk8u331&#x27;</span></span><br><span class="line"><span class="built_in">export</span> JAVA_HOME=<span class="variable">$JAVA8</span></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$&#123;PATH&#125;</span>:<span class="variable">$&#123;JAVA_HOME&#125;</span>/bin</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>验证配置</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~</span><br><span class="line">java -version</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/20220504142736.png" alt="img"></p>
-</li>
-</ol>
-<h1 id="macOS"><a href="#macOS" class="headerlink" title="macOS"></a>macOS</h1><h2 id="系统信息-2"><a href="#系统信息-2" class="headerlink" title="系统信息"></a>系统信息</h2><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220503180724598.png" alt="image-20220503180724598" style="zoom: 67%;" />
-
-<p>为完全释放M1芯片性能，故选用<a href="https://www.azul.com/downloads/?package=jdk#download-openjdk">zaul</a>提供的OpenJDK。</p>
-<p><em>非必要条件</em>：<a href="https://ohmyz.sh/">oh-my-zsh</a></p>
-<h2 id="jdk下载-2"><a href="#jdk下载-2" class="headerlink" title="jdk下载"></a><a href="https://www.azul.com/downloads/?package=jdk#download-openjdk">jdk下载</a></h2><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220503181307987.png" alt="image-20220503181307987" style="zoom: 50%;" />
-
-<p>建议Java Package选择<code>JDK FX</code>，下载格式选择<code>.tar.gz</code>（可支持多版本切换）。</p>
-<h2 id="jdk配置-2"><a href="#jdk配置-2" class="headerlink" title="jdk配置"></a>jdk配置</h2><ol>
-<li><p>解压缩下载包到指定路径</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">-- 解压缩</span><br><span class="line">x zulu8.62.0.19-ca-fx-jdk8.0.332-macosx_aarch64.tar.gz</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220503191722365.png" alt="image-20220503191722365"></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mv</span> zulu-8.jdk ~/Library/Java/JavaVirtualMachines/jdk8u332</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220503191919928.png" alt="image-20220503191919928"></p>
-</li>
-<li><p>环境变量配置</p>
-<p>~&#x2F;.zshrc文件追加配置</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># PATH</span></span><br><span class="line"><span class="built_in">export</span> JAVA8=/Users/karma/Library/Java/JavaVirtualMachines/jdk8u332/Contents/Home</span><br><span class="line"><span class="built_in">export</span> JAVA_HOME=<span class="variable">$&#123;JAVA8&#125;</span></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$&#123;PATH&#125;</span>:<span class="variable">$&#123;JAVA_HOME&#125;</span>/bin</span><br></pre></td></tr></table></figure>
-
-<p>保存文件后，更新配置</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.zshrc</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>验证配置</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~</span><br><span class="line">java -version</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220503193156497.png" alt="image-20220503193156497"></p>
-</li>
-</ol>
-<h2 id="其他问题"><a href="#其他问题" class="headerlink" title="其他问题"></a>其他问题</h2><ol>
-<li><p>无法打开“xxx”，因为Apple无法检查其是否包含恶意软件。</p>
-<img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220503193053338.png" alt="image-20220503193053338" style="zoom:50%;" />
-
-<blockquote>
-<p>打开“系统偏好设置”-&gt;“安全性与隐私”-&gt;“通用”，会看到如下所示的界面，选择“仍要打开”</p>
-</blockquote>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>计算机</category>
-      </categories>
-      <tags>
-        <tag>java</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>命令行工具之nc</title>
-    <url>/karma/7bc65ae3.html</url>
-    <content><![CDATA[<img src="https://raw.githubusercontent.com/Karma1996/Picture/master/man_nc.png" alt="man_nc" style="zoom:33%;" />
-
-<span id="more"></span>
-
-<h1 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h1><blockquote>
-<p><code>nc</code>是一款调试<code>TCP\UDP</code>网络连接的利器，常被称作网络调试的瑞士军刀。基本功能如下：</p>
-<ul>
-<li>传输文本信息</li>
-<li>传输文件</li>
-<li>端口扫描</li>
-<li>远程控制</li>
-</ul>
-</blockquote>
-<h2 id="常用选项"><a href="#常用选项" class="headerlink" title="常用选项"></a>常用选项</h2><ul>
-<li>-g&lt;网关&gt; 设置路由器跃程通信网关，最多可设置8个。</li>
-<li>-G&lt;指向器数目&gt; 设置来源路由指向器，其数值为4的倍数。</li>
-<li>-h 在线帮助。</li>
-<li>-i&lt;延迟秒数&gt; 设置时间间隔，以便传送信息及扫描通信端口。</li>
-<li>-l 使用监听模式，管控传入的资料。</li>
-<li>-n 直接使用IP地址，而不通过域名服务器。</li>
-<li>-o&lt;输出文件&gt; 指定文件名称，把往来传输的数据以16进制字码倾倒成该文件保存。</li>
-<li>-p&lt;通信端口&gt; 设置本地主机使用的通信端口。</li>
-<li>-r 乱数指定本地与远端主机的通信端口。</li>
-<li>-s&lt;来源位址&gt; 设置本地主机送出数据包的IP地址。</li>
-<li>-u 使用UDP传输协议。</li>
-<li>-v 显示指令执行过程。</li>
-<li>-w&lt;超时秒数&gt; 设置等待连线的时间。</li>
-<li>-z 使用0输入&#x2F;输出模式，只在扫描通信端口时使用。</li>
-</ul>
-<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p><strong>系统自带无需安装</strong></p>
-<h1 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h1><h2 id="传输文本信息"><a href="#传输文本信息" class="headerlink" title="传输文本信息"></a>传输文本信息</h2><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20230424001522636.png" alt="image-20230424001522636" style="zoom:67%;" />
-
-<p>服务器、客户端建立远程连接后就可以互发文本消息了</p>
-<h2 id="传输文件"><a href="#传输文件" class="headerlink" title="传输文件"></a>传输文件</h2><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20230424002207152.png" alt="image-20230424002207152" style="zoom: 67%;" />
-]]></content>
-      <categories>
-        <category>计算机</category>
-      </categories>
-      <tags>
-        <tag>工具</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>HTML</title>
     <url>/karma/2eec1551.html</url>
     <content><![CDATA[<p><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220511120351760.png" alt="What is HTML"></p>
@@ -754,75 +613,6 @@
       </tags>
   </entry>
   <entry>
-    <title>小葱拌豆腐</title>
-    <url>/karma/76252650.html</url>
-    <content><![CDATA[<p><img src="https://s.boohee.cn/house/upload_food/2016/7/12/big_photo_url_c90600b67fab47da9d8e0fde1421bb8b.jpg" alt="小葱拌豆腐"></p>
-<span id="more"></span>
-
-<h1 id="材料"><a href="#材料" class="headerlink" title="材料"></a>材料</h1><table>
-<thead>
-<tr>
-<th align="left">名称</th>
-<th align="left">剂量</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">内脂豆腐</td>
-<td align="left">1盒</td>
-</tr>
-<tr>
-<td align="left">小米辣</td>
-<td align="left">适量</td>
-</tr>
-<tr>
-<td align="left">香菜</td>
-<td align="left">适量</td>
-</tr>
-<tr>
-<td align="left">葱花</td>
-<td align="left">适量</td>
-</tr>
-<tr>
-<td align="left">蒜末</td>
-<td align="left">3瓣</td>
-</tr>
-<tr>
-<td align="left">盐</td>
-<td align="left">适量</td>
-</tr>
-<tr>
-<td align="left">生抽</td>
-<td align="left">2勺</td>
-</tr>
-<tr>
-<td align="left">陈醋</td>
-<td align="left">2勺</td>
-</tr>
-<tr>
-<td align="left">香油</td>
-<td align="left">适量</td>
-</tr>
-<tr>
-<td align="left">辣椒油</td>
-<td align="left">适量</td>
-</tr>
-</tbody></table>
-<h1 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h1><ol>
-<li>内脂豆腐一块，倒掉多余水分，放入盘中，用刀划成小块</li>
-<li>葱花蒜末适量，香菜切段，小米辣切圈（没有可不放）</li>
-<li>准备一个小碗，依次加入生抽2勺、陈醋2勺、辣椒油适量、盐适量、香油适量</li>
-<li>将入葱花、蒜末、香菜、小米辣倒入小碗搅拌拌匀</li>
-<li>小碗中的料汁淋在豆腐上即可</li>
-</ol>
-]]></content>
-      <categories>
-        <category>下厨房</category>
-      </categories>
-      <tags>
-        <tag>凉菜</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>HTML5</title>
     <url>/karma/98f3a6d9.html</url>
     <content><![CDATA[<img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220603114847621.png" alt="What is HTML5" style="zoom:67%;" />
@@ -1170,6 +960,373 @@
       </tags>
   </entry>
   <entry>
+    <title>java开发环境搭建</title>
+    <url>/karma/ff3c284c.html</url>
+    <content><![CDATA[<img src="https://raw.githubusercontent.com/Karma1996/Picture/master/java-logo-png.png" alt="This is Java"  />
+
+<span id="more"></span>
+
+<h1 id="windows"><a href="#windows" class="headerlink" title="windows"></a>windows</h1><h2 id="系统信息"><a href="#系统信息" class="headerlink" title="系统信息"></a>系统信息</h2><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/20220504150058.png" alt="img" style="zoom:67%;" />
+
+<h2 id="jdk下载"><a href="#jdk下载" class="headerlink" title="jdk下载"></a><a href="https://www.oracle.com/java/technologies/downloads/#java8-windows">jdk下载</a></h2><p><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220504144453754.png" alt="image-20220504144453754"></p>
+<h2 id="jdk配置"><a href="#jdk配置" class="headerlink" title="jdk配置"></a>jdk配置</h2><ol>
+<li><p>制作压缩包</p>
+<p>orcale没有为windows系统提供<code>*.tar.gz</code>格式jdk，可以通过exe文件转换得到。具体方法参考链接：<a href="https://www.oracle.com/java/technologies/downloads/#java8-windows">https://www.oracle.com/java/technologies/downloads/#java8-windows</a></p>
+<img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220504144758781.png" alt="image-20220504144758781" style="zoom: 50%;" />
+</li>
+<li><p>环境变量配置</p>
+<img src="https://raw.githubusercontent.com/Karma1996/Picture/master/20220504150427.png" alt="img" style="zoom:67%;" />
+
+<blockquote>
+<p>增加系统变量：<code>JAVA_8</code>、<code>JAVA_HOME</code>；编辑系统变量<code>Path</code>，追加<code>%JAVA_HOME%\bin</code></p>
+</blockquote>
+</li>
+<li><p>验证配置</p>
+</li>
+</ol>
+<img src="https://raw.githubusercontent.com/Karma1996/Picture/master/20220504150159.png" alt="img" style="zoom:67%;" />
+
+<h1 id="linux"><a href="#linux" class="headerlink" title="linux"></a>linux</h1><h2 id="系统信息-1"><a href="#系统信息-1" class="headerlink" title="系统信息"></a>系统信息</h2><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/20220504142103.png" alt="img" style="zoom: 67%;" />
+
+<h2 id="jdk下载-1"><a href="#jdk下载-1" class="headerlink" title="jdk下载"></a><a href="https://www.oracle.com/java/technologies/javase/javase8u211-later-archive-downloads.html">jdk下载</a></h2><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220504134741441.png" alt="image-20220504134741441" style="zoom:50%;" />
+
+<p>选择适合自己系统架构的版本，文件格式建议选择<code>*.tar.gz</code>（可支持多版本切换）。</p>
+<h2 id="jdk配置-1"><a href="#jdk配置-1" class="headerlink" title="jdk配置"></a>jdk配置</h2><ol>
+<li><p>解压缩到指定路径</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">x jdk-8u331-linux-x64.tar.gz</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/20220504142256.png" alt="img"></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo <span class="built_in">mv</span> jdk1.8.0_331 /opt/jdk8u331</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/20220504142659.png" alt="img"></p>
+</li>
+<li><p>环境变量配置</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># PATH</span></span><br><span class="line"><span class="built_in">export</span> JAVA8=<span class="string">&#x27;/opt/jdk8u331&#x27;</span></span><br><span class="line"><span class="built_in">export</span> JAVA_HOME=<span class="variable">$JAVA8</span></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$&#123;PATH&#125;</span>:<span class="variable">$&#123;JAVA_HOME&#125;</span>/bin</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>验证配置</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~</span><br><span class="line">java -version</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/20220504142736.png" alt="img"></p>
+</li>
+</ol>
+<h1 id="macOS"><a href="#macOS" class="headerlink" title="macOS"></a>macOS</h1><h2 id="系统信息-2"><a href="#系统信息-2" class="headerlink" title="系统信息"></a>系统信息</h2><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220503180724598.png" alt="image-20220503180724598" style="zoom: 67%;" />
+
+<p>为完全释放M1芯片性能，故选用<a href="https://www.azul.com/downloads/?package=jdk#download-openjdk">zaul</a>提供的OpenJDK。</p>
+<p><em>非必要条件</em>：<a href="https://ohmyz.sh/">oh-my-zsh</a></p>
+<h2 id="jdk下载-2"><a href="#jdk下载-2" class="headerlink" title="jdk下载"></a><a href="https://www.azul.com/downloads/?package=jdk#download-openjdk">jdk下载</a></h2><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220503181307987.png" alt="image-20220503181307987" style="zoom: 50%;" />
+
+<p>建议Java Package选择<code>JDK FX</code>，下载格式选择<code>.tar.gz</code>（可支持多版本切换）。</p>
+<h2 id="jdk配置-2"><a href="#jdk配置-2" class="headerlink" title="jdk配置"></a>jdk配置</h2><ol>
+<li><p>解压缩下载包到指定路径</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">-- 解压缩</span><br><span class="line">x zulu8.62.0.19-ca-fx-jdk8.0.332-macosx_aarch64.tar.gz</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220503191722365.png" alt="image-20220503191722365"></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mv</span> zulu-8.jdk ~/Library/Java/JavaVirtualMachines/jdk8u332</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220503191919928.png" alt="image-20220503191919928"></p>
+</li>
+<li><p>环境变量配置</p>
+<p>~&#x2F;.zshrc文件追加配置</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># PATH</span></span><br><span class="line"><span class="built_in">export</span> JAVA8=/Users/karma/Library/Java/JavaVirtualMachines/jdk8u332/Contents/Home</span><br><span class="line"><span class="built_in">export</span> JAVA_HOME=<span class="variable">$&#123;JAVA8&#125;</span></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$&#123;PATH&#125;</span>:<span class="variable">$&#123;JAVA_HOME&#125;</span>/bin</span><br></pre></td></tr></table></figure>
+
+<p>保存文件后，更新配置</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.zshrc</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>验证配置</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~</span><br><span class="line">java -version</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220503193156497.png" alt="image-20220503193156497"></p>
+</li>
+</ol>
+<h2 id="其他问题"><a href="#其他问题" class="headerlink" title="其他问题"></a>其他问题</h2><ol>
+<li><p>无法打开“xxx”，因为Apple无法检查其是否包含恶意软件。</p>
+<img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220503193053338.png" alt="image-20220503193053338" style="zoom:50%;" />
+
+<blockquote>
+<p>打开“系统偏好设置”-&gt;“安全性与隐私”-&gt;“通用”，会看到如下所示的界面，选择“仍要打开”</p>
+</blockquote>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>计算机</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>命令行工具之jq</title>
+    <url>/karma/a87b4ea2.html</url>
+    <content><![CDATA[<img src="https://raw.githubusercontent.com/Karma1996/Picture/master/man_jq.png" alt="man_jq" style="zoom: 50%;" />
+
+<span id="more"></span>
+
+<h1 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h1><blockquote>
+<p><code>jq</code>用于处理json数据，是一个轻量灵活的命令行工具</p>
+</blockquote>
+<h2 id="常用选项"><a href="#常用选项" class="headerlink" title="常用选项"></a>常用选项</h2><ul>
+<li>-c 紧凑输出json数据</li>
+<li>-e 根据输出结果设置命令退出状态码</li>
+<li>-s 读取所有输入到一个数组</li>
+<li>-r 输出原始字符串，而不是一个json格式</li>
+<li>-C 颜色高亮显示</li>
+<li>-M 单色显示</li>
+<li>-S 排序对象</li>
+<li>–tab 使用tab缩进</li>
+</ul>
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><ol>
+<li><p>mac</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">➜  klog git:(master) ✗ brew install jq</span><br><span class="line"></span><br><span class="line"><span class="comment"># 验证是否成功安装</span></span><br><span class="line">➜  klog git:(master) ✗ jq -V</span><br><span class="line">jq-1.6</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>linux</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">➜  klog git:(master) ✗ yum install jq</span><br><span class="line"></span><br><span class="line"><span class="comment"># 验证是否成功安装</span></span><br><span class="line">➜  klog git:(master) ✗ jq -V</span><br><span class="line">jq-1.6</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h1 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h1><p>准备example.json文件</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">➜  ~ <span class="built_in">echo</span> <span class="string">&#x27;&#123;&quot;ret&quot;:true,&quot;ver&quot;:1,&quot;data&quot;:[&#123;&quot;name&quot;:&quot;张三&quot;,&quot;age&quot;:10,&quot;score&quot;:96&#125;,&#123;&quot;name&quot;:&quot;李四&quot;,&quot;age&quot;:10,&quot;score&quot;:78&#125;,&#123;&quot;name&quot;:&quot;王五&quot;,&quot;age&quot;:10,&quot;score&quot;:84&#125;]&#125;&#x27;</span> &gt; example.json</span><br></pre></td></tr></table></figure>
+
+<h2 id="格式化输出"><a href="#格式化输出" class="headerlink" title="格式化输出"></a>格式化输出</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">➜  ~ <span class="built_in">cat</span> example.json|jq</span><br><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;ret&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="string">&quot;ver&quot;</span>: 1,</span><br><span class="line">  <span class="string">&quot;data&quot;</span>: [</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="string">&quot;name&quot;</span>: <span class="string">&quot;张三&quot;</span>,</span><br><span class="line">      <span class="string">&quot;age&quot;</span>: 10,</span><br><span class="line">      <span class="string">&quot;score&quot;</span>: 96</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="string">&quot;name&quot;</span>: <span class="string">&quot;李四&quot;</span>,</span><br><span class="line">      <span class="string">&quot;age&quot;</span>: 10,</span><br><span class="line">      <span class="string">&quot;score&quot;</span>: 78</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="string">&quot;name&quot;</span>: <span class="string">&quot;王五&quot;</span>,</span><br><span class="line">      <span class="string">&quot;age&quot;</span>: 10,</span><br><span class="line">      <span class="string">&quot;score&quot;</span>: 84</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="提取节点ret"><a href="#提取节点ret" class="headerlink" title="提取节点ret"></a>提取节点ret</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">➜  ~ <span class="built_in">cat</span> example.json|jq .ret</span><br><span class="line"><span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="解析节点data"><a href="#解析节点data" class="headerlink" title="解析节点data"></a>解析节点data</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">➜  ~ <span class="built_in">cat</span> example.json|jq <span class="string">&#x27;.data[]&#x27;</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;name&quot;</span>: <span class="string">&quot;张三&quot;</span>,</span><br><span class="line">  <span class="string">&quot;age&quot;</span>: 10,</span><br><span class="line">  <span class="string">&quot;score&quot;</span>: 96</span><br><span class="line">&#125;</span><br><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;name&quot;</span>: <span class="string">&quot;李四&quot;</span>,</span><br><span class="line">  <span class="string">&quot;age&quot;</span>: 10,</span><br><span class="line">  <span class="string">&quot;score&quot;</span>: 78</span><br><span class="line">&#125;</span><br><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;name&quot;</span>: <span class="string">&quot;王五&quot;</span>,</span><br><span class="line">  <span class="string">&quot;age&quot;</span>: 10,</span><br><span class="line">  <span class="string">&quot;score&quot;</span>: 84</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="提取李四信息"><a href="#提取李四信息" class="headerlink" title="提取李四信息"></a>提取李四信息</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">➜  ~ <span class="built_in">cat</span> example.json|jq <span class="string">&#x27;.data[1]&#x27;</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;name&quot;</span>: <span class="string">&quot;李四&quot;</span>,</span><br><span class="line">  <span class="string">&quot;age&quot;</span>: 10,</span><br><span class="line">  <span class="string">&quot;score&quot;</span>: 78</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="提取李四、王五name"><a href="#提取李四、王五name" class="headerlink" title="提取李四、王五name"></a>提取李四、王五name</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">➜  ~ <span class="built_in">cat</span> example.json|jq <span class="string">&#x27;.data[1:3][].name&#x27;</span></span><br><span class="line"><span class="string">&quot;李四&quot;</span></span><br><span class="line"><span class="string">&quot;王五&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="提取节点data的name和score"><a href="#提取节点data的name和score" class="headerlink" title="提取节点data的name和score"></a>提取节点data的name和score</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">➜  ~ <span class="built_in">cat</span> example.json|jq <span class="string">&#x27;.data[]|&#123;name,score&#125;&#x27;</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;name&quot;</span>: <span class="string">&quot;张三&quot;</span>,</span><br><span class="line">  <span class="string">&quot;score&quot;</span>: 96</span><br><span class="line">&#125;</span><br><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;name&quot;</span>: <span class="string">&quot;李四&quot;</span>,</span><br><span class="line">  <span class="string">&quot;score&quot;</span>: 78</span><br><span class="line">&#125;</span><br><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;name&quot;</span>: <span class="string">&quot;王五&quot;</span>,</span><br><span class="line">  <span class="string">&quot;score&quot;</span>: 84</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="在线工具"><a href="#在线工具" class="headerlink" title="在线工具"></a>在线工具</h1><ul>
+<li><a href="https://jqplay.org/">jq演练场</a></li>
+<li><a href="https://www.json.cn/#">json格式化</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>计算机</category>
+      </categories>
+      <tags>
+        <tag>工具</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>命令行工具之nc</title>
+    <url>/karma/7bc65ae3.html</url>
+    <content><![CDATA[<img src="https://raw.githubusercontent.com/Karma1996/Picture/master/man_nc.png" alt="man_nc" style="zoom:33%;" />
+
+<span id="more"></span>
+
+<h1 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h1><blockquote>
+<p><code>nc</code>是一款调试<code>TCP\UDP</code>网络连接的利器，常被称作网络调试的瑞士军刀。基本功能如下：</p>
+<ul>
+<li>传输文本信息</li>
+<li>传输文件</li>
+<li>端口扫描</li>
+<li>远程控制</li>
+</ul>
+</blockquote>
+<h2 id="常用选项"><a href="#常用选项" class="headerlink" title="常用选项"></a>常用选项</h2><ul>
+<li>-g&lt;网关&gt; 设置路由器跃程通信网关，最多可设置8个。</li>
+<li>-G&lt;指向器数目&gt; 设置来源路由指向器，其数值为4的倍数。</li>
+<li>-h 在线帮助。</li>
+<li>-i&lt;延迟秒数&gt; 设置时间间隔，以便传送信息及扫描通信端口。</li>
+<li>-l 使用监听模式，管控传入的资料。</li>
+<li>-n 直接使用IP地址，而不通过域名服务器。</li>
+<li>-o&lt;输出文件&gt; 指定文件名称，把往来传输的数据以16进制字码倾倒成该文件保存。</li>
+<li>-p&lt;通信端口&gt; 设置本地主机使用的通信端口。</li>
+<li>-r 乱数指定本地与远端主机的通信端口。</li>
+<li>-s&lt;来源位址&gt; 设置本地主机送出数据包的IP地址。</li>
+<li>-u 使用UDP传输协议。</li>
+<li>-v 显示指令执行过程。</li>
+<li>-w&lt;超时秒数&gt; 设置等待连线的时间。</li>
+<li>-z 使用0输入&#x2F;输出模式，只在扫描通信端口时使用。</li>
+</ul>
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p><strong>系统自带无需安装</strong></p>
+<h1 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h1><h2 id="传输文本信息"><a href="#传输文本信息" class="headerlink" title="传输文本信息"></a>传输文本信息</h2><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20230424001522636.png" alt="image-20230424001522636" style="zoom:67%;" />
+
+<p>服务器、客户端建立远程连接后就可以互发文本消息了</p>
+<h2 id="传输文件"><a href="#传输文件" class="headerlink" title="传输文件"></a>传输文件</h2><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20230424002207152.png" alt="image-20230424002207152" style="zoom: 67%;" />
+]]></content>
+      <categories>
+        <category>计算机</category>
+      </categories>
+      <tags>
+        <tag>工具</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>小葱拌豆腐</title>
+    <url>/karma/76252650.html</url>
+    <content><![CDATA[<p><img src="https://s.boohee.cn/house/upload_food/2016/7/12/big_photo_url_c90600b67fab47da9d8e0fde1421bb8b.jpg" alt="小葱拌豆腐"></p>
+<span id="more"></span>
+
+<h1 id="材料"><a href="#材料" class="headerlink" title="材料"></a>材料</h1><table>
+<thead>
+<tr>
+<th align="left">名称</th>
+<th align="left">剂量</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">内脂豆腐</td>
+<td align="left">1盒</td>
+</tr>
+<tr>
+<td align="left">小米辣</td>
+<td align="left">适量</td>
+</tr>
+<tr>
+<td align="left">香菜</td>
+<td align="left">适量</td>
+</tr>
+<tr>
+<td align="left">葱花</td>
+<td align="left">适量</td>
+</tr>
+<tr>
+<td align="left">蒜末</td>
+<td align="left">3瓣</td>
+</tr>
+<tr>
+<td align="left">盐</td>
+<td align="left">适量</td>
+</tr>
+<tr>
+<td align="left">生抽</td>
+<td align="left">2勺</td>
+</tr>
+<tr>
+<td align="left">陈醋</td>
+<td align="left">2勺</td>
+</tr>
+<tr>
+<td align="left">香油</td>
+<td align="left">适量</td>
+</tr>
+<tr>
+<td align="left">辣椒油</td>
+<td align="left">适量</td>
+</tr>
+</tbody></table>
+<h1 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h1><ol>
+<li>内脂豆腐一块，倒掉多余水分，放入盘中，用刀划成小块</li>
+<li>葱花蒜末适量，香菜切段，小米辣切圈（没有可不放）</li>
+<li>准备一个小碗，依次加入生抽2勺、陈醋2勺、辣椒油适量、盐适量、香油适量</li>
+<li>将入葱花、蒜末、香菜、小米辣倒入小碗搅拌拌匀</li>
+<li>小碗中的料汁淋在豆腐上即可</li>
+</ol>
+]]></content>
+      <categories>
+        <category>下厨房</category>
+      </categories>
+      <tags>
+        <tag>凉菜</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>虚拟化工具之podman</title>
+    <url>/karma/8b653c17.html</url>
+    <content><![CDATA[<p><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20230907232713038.png" alt="podman"></p>
+<span id="more"></span>
+
+<h1 id="Podman-简介"><a href="#Podman-简介" class="headerlink" title="Podman 简介"></a>Podman 简介</h1><ul>
+<li><p>什么是Podman</p>
+<p>Podman 是一个用于管理和运行容器的开源工具。它是一个轻量级的容器引擎，可以在 Linux系统上替代 Docker。Podman 提供了与 Docker 兼容的命令行接口，使用户能够创建、运行和管理容器。与 Docker 不同的是，Podman 不需要一个守护进程来管理容器，而是直接在用户进程中运行。这使得 Podman 更加轻量级、安全且易于使用。</p>
+</li>
+<li><p>Podman与传统虚拟化工具的区别</p>
+<p>Podman 与传统虚拟化工具（如虚拟机）相比有几个主要区别：</p>
+<ol>
+<li><p>轻量性：传统虚拟化工具需要运行一个完整的操作系统实例作为宿主机，而 Podman 则是在宿主机的操作系统上直接运行容器。这使得 Podman 更加轻量，不需要额外的资源和性能开销。</p>
+</li>
+<li><p>性能：由于 Podman 直接在宿主机上运行容器，而不是在虚拟机中运行操作系统实例，因此它具有更高的性能和更低的延迟。这使得它在需要高性能和低延迟的场景下更加适用。</p>
+</li>
+<li><p>安全性：传统虚拟化工具在容器之间提供较好的隔离性，但它们仍然需要管理一个完整的操作系统实例，可能存在更多的安全漏洞。而 Podman 则利用 Linux 内核的命名空间和 cgroups 功能提供容器之间的隔离，从而减少了安全风险。</p>
+</li>
+<li><p>管理和部署：Podman 提供与 Docker 兼容的命令行接口，使得用户可以轻松地迁移和管理容器。它还支持 Kubernetes 容器编排平台，可以与 Kubernetes 紧密集成，简化容器的部署和管理。</p>
+</li>
+</ol>
+<p>总的来说，Podman 是一个更加轻量、高性能和安全的容器引擎，适用于需要快速部署和管理容器的场景。</p>
+</li>
+</ul>
+<h1 id="安装和配置"><a href="#安装和配置" class="headerlink" title="安装和配置"></a>安装和配置</h1><ul>
+<li><p>系统要求</p>
+<p>Podman 作为一个轻量级的容器引擎，它的配置要求相对较低。以下是 Podman 的基本配置要求：</p>
+<ol>
+<li><p>操作系统：Podman 支持运行在 Linux 操作系统上，包括 Red Hat Enterprise Linux、CentOS、Fedora、Ubuntu、Debian 等。</p>
+</li>
+<li><p>内核版本：Podman 要求 Linux 内核版本在 3.10 或更高版本。同时，建议使用最新版本的内核以获取更好的性能和安全性。</p>
+</li>
+<li><p>存储空间：Podman 需要一定的存储空间来存储容器镜像和容器数据。建议至少有 10 GB 的可用存储空间。</p>
+</li>
+<li><p>内存和 CPU：Podman 的内存和 CPU 要求取决于运行的容器的数量和规模。建议至少有 2 GB 的可用内存和 2 个 CPU 核心。</p>
+</li>
+<li><p>安全设置：Podman 需要一定的安全设置来确保容器的安全性。建议禁用不必要的服务和端口，限制容器的资源使用，并启用 SELinux 或 AppArmor 等安全机制。</p>
+</li>
+</ol>
+<p>总的来说，Podman 的配置要求相对较低，可以在大多数 Linux 系统上运行。同时，为了获得更好的性能和安全性，可以根据实际情况进行适当的配置和优化。</p>
+</li>
+<li><p>安装Podman</p>
+<p>官方文档: <a href="https://podman.io/docs/installation">https://podman.io/docs/installation</a></p>
+</li>
+</ul>
+<h1 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h1><ul>
+<li><p>镜像</p>
+<p><strong>镜像</strong> （<code>Image</code>）是一个特殊的文件系统，除了提供容器运行时所需的程序、库、资源、配置等文件外，还包含了一些为运行时准备的一些配置参数（如匿名卷、环境变量、用户等）。镜像不包含任何动态数据，其内容在构建之后也不会被改变。</p>
+<p>镜像包含操作系统完整的 <code>root</code> 文件系统，其体积往往是庞大的，因此在设计时，充分利用 <a href="https://en.wikipedia.org/wiki/Union_mount">Union FS</a> 的技术，将其设计为分层存储的架构。所以严格来说，镜像并非是像一个 <code>ISO</code> 那样的打包文件，镜像只是一个虚拟的概念，其实际体现并非由一个文件组成，而是由多层文件系统联合组成。</p>
+</li>
+<li><p>容器</p>
+<p>镜像（<code>Image</code>）和容器（<code>Container</code>）的关系，就像是面向对象程序设计中的 <code>类</code> 和 <code>实例</code> 一样，镜像是静态的定义，容器是镜像运行时的实体。容器可以被创建、启动、停止、删除、暂停等。</p>
+<p>容器的实质是进程，但与直接在宿主执行的进程不同，容器进程运行于属于自己的独立的 <a href="https://en.wikipedia.org/wiki/Linux_namespaces">命名空间</a>。因此容器可以拥有自己的 <code>root</code> 文件系统、自己的网络配置、自己的进程空间，甚至自己的用户 ID 空间。容器内的进程是运行在一个隔离的环境里，使用起来，就好像是在一个独立于宿主的系统下操作一样。这种特性使得容器封装的应用比直接在宿主运行更加安全。</p>
+</li>
+<li><p>仓库</p>
+<p>存储镜像的中心化仓库，可分为公共仓库和私有仓库。旨在最大化的提升镜像的流通性。</p>
+</li>
+</ul>
+<h1 id="管理镜像"><a href="#管理镜像" class="headerlink" title="管理镜像"></a>管理镜像</h1><ul>
+<li>下载和导入镜像</li>
+<li>查看、删除和更新镜像</li>
+<li>构建自定义镜像</li>
+</ul>
+<h1 id="使用Podman管理容器"><a href="#使用Podman管理容器" class="headerlink" title="使用Podman管理容器"></a>使用Podman管理容器</h1><ul>
+<li>创建容器</li>
+<li>启动、停止和重启容器</li>
+<li>查看容器状态和日志</li>
+<li>删除容器</li>
+<li>容器网络配置</li>
+</ul>
+<h1 id="多容器管理"><a href="#多容器管理" class="headerlink" title="多容器管理"></a>多容器管理</h1><ul>
+<li>创建和管理Pod</li>
+<li>Pod中容器间的通信和共享资源</li>
+<li>Pod管理命令</li>
+</ul>
+<h1 id="安全性和权限管理"><a href="#安全性和权限管理" class="headerlink" title="安全性和权限管理"></a>安全性和权限管理</h1><ul>
+<li>用户和组权限</li>
+<li>容器的安全隔离</li>
+<li>安全策略和限制</li>
+</ul>
+<h1 id="Podman的高级功能"><a href="#Podman的高级功能" class="headerlink" title="Podman的高级功能"></a>Podman的高级功能</h1><ul>
+<li>容器快照和恢复</li>
+<li>容器监控和日志分析</li>
+<li>容器编排和调度</li>
+</ul>
+<h1 id="实际应用场景"><a href="#实际应用场景" class="headerlink" title="实际应用场景"></a>实际应用场景</h1><ul>
+<li>开发和测试环境</li>
+<li>云原生应用部署</li>
+<li>微服务架构</li>
+</ul>
+]]></content>
+      <categories>
+        <category>计算机</category>
+      </categories>
+      <tags>
+        <tag>工具</tag>
+        <tag>虚拟化</tag>
+        <tag>容器</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>旅行游记之昆明</title>
     <url>/karma/e6fbdd14.html</url>
     <content><![CDATA[<img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20230409202742776.png" alt="云南游记" style="zoom:50%;" />
@@ -1419,62 +1576,6 @@
       </categories>
       <tags>
         <tag>旅行</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>命令行工具之jq</title>
-    <url>/karma/a87b4ea2.html</url>
-    <content><![CDATA[<img src="https://raw.githubusercontent.com/Karma1996/Picture/master/man_jq.png" alt="man_jq" style="zoom: 50%;" />
-
-<span id="more"></span>
-
-<h1 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h1><blockquote>
-<p><code>jq</code>用于处理json数据，是一个轻量灵活的命令行工具</p>
-</blockquote>
-<h2 id="常用选项"><a href="#常用选项" class="headerlink" title="常用选项"></a>常用选项</h2><ul>
-<li>-c 紧凑输出json数据</li>
-<li>-e 根据输出结果设置命令退出状态码</li>
-<li>-s 读取所有输入到一个数组</li>
-<li>-r 输出原始字符串，而不是一个json格式</li>
-<li>-C 颜色高亮显示</li>
-<li>-M 单色显示</li>
-<li>-S 排序对象</li>
-<li>–tab 使用tab缩进</li>
-</ul>
-<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><ol>
-<li><p>mac</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">➜  klog git:(master) ✗ brew install jq</span><br><span class="line"></span><br><span class="line"><span class="comment"># 验证是否成功安装</span></span><br><span class="line">➜  klog git:(master) ✗ jq -V</span><br><span class="line">jq-1.6</span><br></pre></td></tr></table></figure>
-
-
-</li>
-<li><p>linux</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">➜  klog git:(master) ✗ yum install jq</span><br><span class="line"></span><br><span class="line"><span class="comment"># 验证是否成功安装</span></span><br><span class="line">➜  klog git:(master) ✗ jq -V</span><br><span class="line">jq-1.6</span><br></pre></td></tr></table></figure></li>
-</ol>
-<h1 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h1><p>准备example.json文件</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">➜  ~ <span class="built_in">echo</span> <span class="string">&#x27;&#123;&quot;ret&quot;:true,&quot;ver&quot;:1,&quot;data&quot;:[&#123;&quot;name&quot;:&quot;张三&quot;,&quot;age&quot;:10,&quot;score&quot;:96&#125;,&#123;&quot;name&quot;:&quot;李四&quot;,&quot;age&quot;:10,&quot;score&quot;:78&#125;,&#123;&quot;name&quot;:&quot;王五&quot;,&quot;age&quot;:10,&quot;score&quot;:84&#125;]&#125;&#x27;</span> &gt; example.json</span><br></pre></td></tr></table></figure>
-
-<h2 id="格式化输出"><a href="#格式化输出" class="headerlink" title="格式化输出"></a>格式化输出</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">➜  ~ <span class="built_in">cat</span> example.json|jq</span><br><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;ret&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="string">&quot;ver&quot;</span>: 1,</span><br><span class="line">  <span class="string">&quot;data&quot;</span>: [</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="string">&quot;name&quot;</span>: <span class="string">&quot;张三&quot;</span>,</span><br><span class="line">      <span class="string">&quot;age&quot;</span>: 10,</span><br><span class="line">      <span class="string">&quot;score&quot;</span>: 96</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="string">&quot;name&quot;</span>: <span class="string">&quot;李四&quot;</span>,</span><br><span class="line">      <span class="string">&quot;age&quot;</span>: 10,</span><br><span class="line">      <span class="string">&quot;score&quot;</span>: 78</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="string">&quot;name&quot;</span>: <span class="string">&quot;王五&quot;</span>,</span><br><span class="line">      <span class="string">&quot;age&quot;</span>: 10,</span><br><span class="line">      <span class="string">&quot;score&quot;</span>: 84</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="提取节点ret"><a href="#提取节点ret" class="headerlink" title="提取节点ret"></a>提取节点ret</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">➜  ~ <span class="built_in">cat</span> example.json|jq .ret</span><br><span class="line"><span class="literal">true</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="解析节点data"><a href="#解析节点data" class="headerlink" title="解析节点data"></a>解析节点data</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">➜  ~ <span class="built_in">cat</span> example.json|jq <span class="string">&#x27;.data[]&#x27;</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;name&quot;</span>: <span class="string">&quot;张三&quot;</span>,</span><br><span class="line">  <span class="string">&quot;age&quot;</span>: 10,</span><br><span class="line">  <span class="string">&quot;score&quot;</span>: 96</span><br><span class="line">&#125;</span><br><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;name&quot;</span>: <span class="string">&quot;李四&quot;</span>,</span><br><span class="line">  <span class="string">&quot;age&quot;</span>: 10,</span><br><span class="line">  <span class="string">&quot;score&quot;</span>: 78</span><br><span class="line">&#125;</span><br><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;name&quot;</span>: <span class="string">&quot;王五&quot;</span>,</span><br><span class="line">  <span class="string">&quot;age&quot;</span>: 10,</span><br><span class="line">  <span class="string">&quot;score&quot;</span>: 84</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="提取李四信息"><a href="#提取李四信息" class="headerlink" title="提取李四信息"></a>提取李四信息</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">➜  ~ <span class="built_in">cat</span> example.json|jq <span class="string">&#x27;.data[1]&#x27;</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;name&quot;</span>: <span class="string">&quot;李四&quot;</span>,</span><br><span class="line">  <span class="string">&quot;age&quot;</span>: 10,</span><br><span class="line">  <span class="string">&quot;score&quot;</span>: 78</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="提取李四、王五name"><a href="#提取李四、王五name" class="headerlink" title="提取李四、王五name"></a>提取李四、王五name</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">➜  ~ <span class="built_in">cat</span> example.json|jq <span class="string">&#x27;.data[1:3][].name&#x27;</span></span><br><span class="line"><span class="string">&quot;李四&quot;</span></span><br><span class="line"><span class="string">&quot;王五&quot;</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="提取节点data的name和score"><a href="#提取节点data的name和score" class="headerlink" title="提取节点data的name和score"></a>提取节点data的name和score</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">➜  ~ <span class="built_in">cat</span> example.json|jq <span class="string">&#x27;.data[]|&#123;name,score&#125;&#x27;</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;name&quot;</span>: <span class="string">&quot;张三&quot;</span>,</span><br><span class="line">  <span class="string">&quot;score&quot;</span>: 96</span><br><span class="line">&#125;</span><br><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;name&quot;</span>: <span class="string">&quot;李四&quot;</span>,</span><br><span class="line">  <span class="string">&quot;score&quot;</span>: 78</span><br><span class="line">&#125;</span><br><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;name&quot;</span>: <span class="string">&quot;王五&quot;</span>,</span><br><span class="line">  <span class="string">&quot;score&quot;</span>: 84</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h1 id="在线工具"><a href="#在线工具" class="headerlink" title="在线工具"></a>在线工具</h1><ul>
-<li><a href="https://jqplay.org/">jq演练场</a></li>
-<li><a href="https://www.json.cn/#">json格式化</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>计算机</category>
-      </categories>
-      <tags>
-        <tag>工具</tag>
       </tags>
   </entry>
 </search>

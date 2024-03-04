@@ -21,29 +21,29 @@
 <script class="next-config" data-name="main" type="application/json">{"hostname":"karma1996.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
     <meta property="og:type" content="article">
-<meta property="og:title" content="命令行工具之nc">
-<meta property="og:url" content="https://karma1996.github.io/karma/7bc65ae3.html">
+<meta property="og:title" content="虚拟化工具之podman">
+<meta property="og:url" content="https://karma1996.github.io/karma/8b653c17.html">
 <meta property="og:site_name" content="klog">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://raw.githubusercontent.com/Karma1996/Picture/master/man_nc.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20230424001522636.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20230424002207152.png">
-<meta property="article:published_time" content="2023-04-23T16:23:56.000Z">
-<meta property="article:modified_time" content="2023-04-23T16:23:56.000Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20230907232713038.png">
+<meta property="article:published_time" content="2023-09-07T15:57:39.000Z">
+<meta property="article:modified_time" content="2023-09-07T15:57:39.000Z">
 <meta property="article:author" content="Karma">
 <meta property="article:tag" content="工具">
+<meta property="article:tag" content="虚拟化">
+<meta property="article:tag" content="容器">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/Karma1996/Picture/master/man_nc.png">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20230907232713038.png">
 
 
-<link rel="canonical" href="https://karma1996.github.io/karma/7bc65ae3.html">
+<link rel="canonical" href="https://karma1996.github.io/karma/8b653c17.html">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://karma1996.github.io/karma/7bc65ae3.html","path":"karma/7bc65ae3.html","title":"命令行工具之nc"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://karma1996.github.io/karma/8b653c17.html","path":"karma/8b653c17.html","title":"虚拟化工具之podman"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>命令行工具之nc | klog</title>
+<title>虚拟化工具之podman | klog</title>
   
 
 
@@ -143,7 +143,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8A%9F%E8%83%BD"><span class="nav-number">1.</span> <span class="nav-text">功能</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E9%80%89%E9%A1%B9"><span class="nav-number">1.1.</span> <span class="nav-text">常用选项</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-number">2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%A4%BA%E4%BE%8B"><span class="nav-number">3.</span> <span class="nav-text">示例</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BC%A0%E8%BE%93%E6%96%87%E6%9C%AC%E4%BF%A1%E6%81%AF"><span class="nav-number">3.1.</span> <span class="nav-text">传输文本信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BC%A0%E8%BE%93%E6%96%87%E4%BB%B6"><span class="nav-number">3.2.</span> <span class="nav-text">传输文件</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Podman-%E7%AE%80%E4%BB%8B"><span class="nav-number">1.</span> <span class="nav-text">Podman 简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE"><span class="nav-number">2.</span> <span class="nav-text">安装和配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-number">3.</span> <span class="nav-text">基本概念</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AE%A1%E7%90%86%E9%95%9C%E5%83%8F"><span class="nav-number">4.</span> <span class="nav-text">管理镜像</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8Podman%E7%AE%A1%E7%90%86%E5%AE%B9%E5%99%A8"><span class="nav-number">5.</span> <span class="nav-text">使用Podman管理容器</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A4%9A%E5%AE%B9%E5%99%A8%E7%AE%A1%E7%90%86"><span class="nav-number">6.</span> <span class="nav-text">多容器管理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E5%85%A8%E6%80%A7%E5%92%8C%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86"><span class="nav-number">7.</span> <span class="nav-text">安全性和权限管理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Podman%E7%9A%84%E9%AB%98%E7%BA%A7%E5%8A%9F%E8%83%BD"><span class="nav-number">8.</span> <span class="nav-text">Podman的高级功能</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%9E%E9%99%85%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-number">9.</span> <span class="nav-text">实际应用场景</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -208,7 +208,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://karma1996.github.io/karma/7bc65ae3.html">
+    <link itemprop="mainEntityOfPage" href="https://karma1996.github.io/karma/8b653c17.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/karma.jpg">
@@ -221,12 +221,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="命令行工具之nc | klog">
+      <meta itemprop="name" content="虚拟化工具之podman | klog">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          命令行工具之nc
+          虚拟化工具之podman
         </h1>
 
         <div class="post-meta-container">
@@ -237,7 +237,7 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2023-04-24 00:23:56" itemprop="dateCreated datePublished" datetime="2023-04-24T00:23:56+08:00">2023-04-24</time>
+      <time title="创建时间：2023-09-07 23:57:39" itemprop="dateCreated datePublished" datetime="2023-09-07T23:57:39+08:00">2023-09-07</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -256,14 +256,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>459</span>
+      <span>1.9k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
+      <span>3 分钟</span>
     </span>
 </div>
 
@@ -273,40 +273,94 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/man_nc.png" alt="man_nc" style="zoom:33%;" />
-
+    <div class="post-body" itemprop="articleBody"><p><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20230907232713038.png" alt="podman"></p>
 <span id="more"></span>
 
-<h1 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h1><blockquote>
-<p><code>nc</code>是一款调试<code>TCP\UDP</code>网络连接的利器，常被称作网络调试的瑞士军刀。基本功能如下：</p>
-<ul>
-<li>传输文本信息</li>
-<li>传输文件</li>
-<li>端口扫描</li>
-<li>远程控制</li>
+<h1 id="Podman-简介"><a href="#Podman-简介" class="headerlink" title="Podman 简介"></a>Podman 简介</h1><ul>
+<li><p>什么是Podman</p>
+<p>Podman 是一个用于管理和运行容器的开源工具。它是一个轻量级的容器引擎，可以在 Linux系统上替代 Docker。Podman 提供了与 Docker 兼容的命令行接口，使用户能够创建、运行和管理容器。与 Docker 不同的是，Podman 不需要一个守护进程来管理容器，而是直接在用户进程中运行。这使得 Podman 更加轻量级、安全且易于使用。</p>
+</li>
+<li><p>Podman与传统虚拟化工具的区别</p>
+<p>Podman 与传统虚拟化工具（如虚拟机）相比有几个主要区别：</p>
+<ol>
+<li><p>轻量性：传统虚拟化工具需要运行一个完整的操作系统实例作为宿主机，而 Podman 则是在宿主机的操作系统上直接运行容器。这使得 Podman 更加轻量，不需要额外的资源和性能开销。</p>
+</li>
+<li><p>性能：由于 Podman 直接在宿主机上运行容器，而不是在虚拟机中运行操作系统实例，因此它具有更高的性能和更低的延迟。这使得它在需要高性能和低延迟的场景下更加适用。</p>
+</li>
+<li><p>安全性：传统虚拟化工具在容器之间提供较好的隔离性，但它们仍然需要管理一个完整的操作系统实例，可能存在更多的安全漏洞。而 Podman 则利用 Linux 内核的命名空间和 cgroups 功能提供容器之间的隔离，从而减少了安全风险。</p>
+</li>
+<li><p>管理和部署：Podman 提供与 Docker 兼容的命令行接口，使得用户可以轻松地迁移和管理容器。它还支持 Kubernetes 容器编排平台，可以与 Kubernetes 紧密集成，简化容器的部署和管理。</p>
+</li>
+</ol>
+<p>总的来说，Podman 是一个更加轻量、高性能和安全的容器引擎，适用于需要快速部署和管理容器的场景。</p>
+</li>
 </ul>
-</blockquote>
-<h2 id="常用选项"><a href="#常用选项" class="headerlink" title="常用选项"></a>常用选项</h2><ul>
-<li>-g&lt;网关&gt; 设置路由器跃程通信网关，最多可设置8个。</li>
-<li>-G&lt;指向器数目&gt; 设置来源路由指向器，其数值为4的倍数。</li>
-<li>-h 在线帮助。</li>
-<li>-i&lt;延迟秒数&gt; 设置时间间隔，以便传送信息及扫描通信端口。</li>
-<li>-l 使用监听模式，管控传入的资料。</li>
-<li>-n 直接使用IP地址，而不通过域名服务器。</li>
-<li>-o&lt;输出文件&gt; 指定文件名称，把往来传输的数据以16进制字码倾倒成该文件保存。</li>
-<li>-p&lt;通信端口&gt; 设置本地主机使用的通信端口。</li>
-<li>-r 乱数指定本地与远端主机的通信端口。</li>
-<li>-s&lt;来源位址&gt; 设置本地主机送出数据包的IP地址。</li>
-<li>-u 使用UDP传输协议。</li>
-<li>-v 显示指令执行过程。</li>
-<li>-w&lt;超时秒数&gt; 设置等待连线的时间。</li>
-<li>-z 使用0输入&#x2F;输出模式，只在扫描通信端口时使用。</li>
+<h1 id="安装和配置"><a href="#安装和配置" class="headerlink" title="安装和配置"></a>安装和配置</h1><ul>
+<li><p>系统要求</p>
+<p>Podman 作为一个轻量级的容器引擎，它的配置要求相对较低。以下是 Podman 的基本配置要求：</p>
+<ol>
+<li><p>操作系统：Podman 支持运行在 Linux 操作系统上，包括 Red Hat Enterprise Linux、CentOS、Fedora、Ubuntu、Debian 等。</p>
+</li>
+<li><p>内核版本：Podman 要求 Linux 内核版本在 3.10 或更高版本。同时，建议使用最新版本的内核以获取更好的性能和安全性。</p>
+</li>
+<li><p>存储空间：Podman 需要一定的存储空间来存储容器镜像和容器数据。建议至少有 10 GB 的可用存储空间。</p>
+</li>
+<li><p>内存和 CPU：Podman 的内存和 CPU 要求取决于运行的容器的数量和规模。建议至少有 2 GB 的可用内存和 2 个 CPU 核心。</p>
+</li>
+<li><p>安全设置：Podman 需要一定的安全设置来确保容器的安全性。建议禁用不必要的服务和端口，限制容器的资源使用，并启用 SELinux 或 AppArmor 等安全机制。</p>
+</li>
+</ol>
+<p>总的来说，Podman 的配置要求相对较低，可以在大多数 Linux 系统上运行。同时，为了获得更好的性能和安全性，可以根据实际情况进行适当的配置和优化。</p>
+</li>
+<li><p>安装Podman</p>
+<p>官方文档: <a target="_blank" rel="noopener" href="https://podman.io/docs/installation">https://podman.io/docs/installation</a></p>
+</li>
 </ul>
-<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p><strong>系统自带无需安装</strong></p>
-<h1 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h1><h2 id="传输文本信息"><a href="#传输文本信息" class="headerlink" title="传输文本信息"></a>传输文本信息</h2><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20230424001522636.png" alt="image-20230424001522636" style="zoom:67%;" />
-
-<p>服务器、客户端建立远程连接后就可以互发文本消息了</p>
-<h2 id="传输文件"><a href="#传输文件" class="headerlink" title="传输文件"></a>传输文件</h2><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20230424002207152.png" alt="image-20230424002207152" style="zoom: 67%;" />
+<h1 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h1><ul>
+<li><p>镜像</p>
+<p><strong>镜像</strong> （<code>Image</code>）是一个特殊的文件系统，除了提供容器运行时所需的程序、库、资源、配置等文件外，还包含了一些为运行时准备的一些配置参数（如匿名卷、环境变量、用户等）。镜像不包含任何动态数据，其内容在构建之后也不会被改变。</p>
+<p>镜像包含操作系统完整的 <code>root</code> 文件系统，其体积往往是庞大的，因此在设计时，充分利用 <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Union_mount">Union FS</a> 的技术，将其设计为分层存储的架构。所以严格来说，镜像并非是像一个 <code>ISO</code> 那样的打包文件，镜像只是一个虚拟的概念，其实际体现并非由一个文件组成，而是由多层文件系统联合组成。</p>
+</li>
+<li><p>容器</p>
+<p>镜像（<code>Image</code>）和容器（<code>Container</code>）的关系，就像是面向对象程序设计中的 <code>类</code> 和 <code>实例</code> 一样，镜像是静态的定义，容器是镜像运行时的实体。容器可以被创建、启动、停止、删除、暂停等。</p>
+<p>容器的实质是进程，但与直接在宿主执行的进程不同，容器进程运行于属于自己的独立的 <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Linux_namespaces">命名空间</a>。因此容器可以拥有自己的 <code>root</code> 文件系统、自己的网络配置、自己的进程空间，甚至自己的用户 ID 空间。容器内的进程是运行在一个隔离的环境里，使用起来，就好像是在一个独立于宿主的系统下操作一样。这种特性使得容器封装的应用比直接在宿主运行更加安全。</p>
+</li>
+<li><p>仓库</p>
+<p>存储镜像的中心化仓库，可分为公共仓库和私有仓库。旨在最大化的提升镜像的流通性。</p>
+</li>
+</ul>
+<h1 id="管理镜像"><a href="#管理镜像" class="headerlink" title="管理镜像"></a>管理镜像</h1><ul>
+<li>下载和导入镜像</li>
+<li>查看、删除和更新镜像</li>
+<li>构建自定义镜像</li>
+</ul>
+<h1 id="使用Podman管理容器"><a href="#使用Podman管理容器" class="headerlink" title="使用Podman管理容器"></a>使用Podman管理容器</h1><ul>
+<li>创建容器</li>
+<li>启动、停止和重启容器</li>
+<li>查看容器状态和日志</li>
+<li>删除容器</li>
+<li>容器网络配置</li>
+</ul>
+<h1 id="多容器管理"><a href="#多容器管理" class="headerlink" title="多容器管理"></a>多容器管理</h1><ul>
+<li>创建和管理Pod</li>
+<li>Pod中容器间的通信和共享资源</li>
+<li>Pod管理命令</li>
+</ul>
+<h1 id="安全性和权限管理"><a href="#安全性和权限管理" class="headerlink" title="安全性和权限管理"></a>安全性和权限管理</h1><ul>
+<li>用户和组权限</li>
+<li>容器的安全隔离</li>
+<li>安全策略和限制</li>
+</ul>
+<h1 id="Podman的高级功能"><a href="#Podman的高级功能" class="headerlink" title="Podman的高级功能"></a>Podman的高级功能</h1><ul>
+<li>容器快照和恢复</li>
+<li>容器监控和日志分析</li>
+<li>容器编排和调度</li>
+</ul>
+<h1 id="实际应用场景"><a href="#实际应用场景" class="headerlink" title="实际应用场景"></a>实际应用场景</h1><ul>
+<li>开发和测试环境</li>
+<li>云原生应用部署</li>
+<li>微服务架构</li>
+</ul>
 
     </div>
 
@@ -324,7 +378,7 @@
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://karma1996.github.io/karma/7bc65ae3.html" title="命令行工具之nc">https://karma1996.github.io/karma/7bc65ae3.html</a>
+      <a href="https://karma1996.github.io/karma/8b653c17.html" title="虚拟化工具之podman">https://karma1996.github.io/karma/8b653c17.html</a>
   </li>
   <li class="post-copyright-license">
       <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -334,20 +388,19 @@
 
           <div class="post-tags">
               <a href="/tags/%E5%B7%A5%E5%85%B7/" rel="tag"># 工具</a>
+              <a href="/tags/%E8%99%9A%E6%8B%9F%E5%8C%96/" rel="tag"># 虚拟化</a>
+              <a href="/tags/%E5%AE%B9%E5%99%A8/" rel="tag"># 容器</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/karma/a87b4ea2.html" rel="prev" title="命令行工具之jq">
-                  <i class="fa fa-angle-left"></i> 命令行工具之jq
+                <a href="/karma/7bc65ae3.html" rel="prev" title="命令行工具之nc">
+                  <i class="fa fa-angle-left"></i> 命令行工具之nc
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/karma/8b653c17.html" rel="next" title="虚拟化工具之podman">
-                  虚拟化工具之podman <i class="fa fa-angle-right"></i>
-                </a>
             </div>
           </div>
     </footer>
