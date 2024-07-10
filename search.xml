@@ -1,6 +1,203 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>CSS</title>
+    <url>/karma/ee69e452.html</url>
+    <content><![CDATA[<img src="https://raw.githubusercontent.com/Karma1996/Picture/master/v2-a86dce4fef5c111f0db7e3fb291dd83f_720w.jpg" alt="CSS"  />
+
+<span id="more"></span>
+
+<p>CSS（Cascading Style Sheet）层叠样式表。CSS的作用就是给HTML页面标签添加各种样式，<strong>定义网页的显示效果</strong>。CSS的最新版本是CSS3。</p>
+<p>和HTML比较，CSS的优点：</p>
+<ol>
+<li>数据和显示分开</li>
+<li>降低网络流量</li>
+<li>网络视觉效果一致</li>
+<li>低耦合</li>
+</ol>
+<h1 id="CSS语法"><a href="#CSS语法" class="headerlink" title="CSS语法"></a>CSS语法</h1><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">            <span class="selector-tag">p</span> &#123;</span></span><br><span class="line"><span class="language-css">                <span class="attribute">color</span>: red;</span></span><br><span class="line"><span class="language-css">                <span class="attribute">font-size</span>: <span class="number">30px</span>;</span></span><br><span class="line"><span class="language-css">                <span class="attribute">text-decoration</span>: underline;</span></span><br><span class="line"><span class="language-css">                <span class="attribute">font-weight</span>: bold;</span></span><br><span class="line"><span class="language-css">                <span class="attribute">text-align</span>: center;</span></span><br><span class="line"><span class="language-css">                <span class="attribute">font-style</span>: italic;</span></span><br><span class="line"><span class="language-css">            &#125;</span></span><br><span class="line"><span class="language-css">            <span class="selector-tag">h1</span> &#123;</span></span><br><span class="line"><span class="language-css">                <span class="attribute">color</span>: blue;</span></span><br><span class="line"><span class="language-css">                <span class="attribute">font-size</span>: <span class="number">50px</span>;</span></span><br><span class="line"><span class="language-css">                <span class="attribute">font-weight</span>: bold;</span></span><br><span class="line"><span class="language-css">                <span class="attribute">background-color</span>: pink;</span></span><br><span class="line"><span class="language-css">            &#125;</span></span><br><span class="line"><span class="language-css">        </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h1</span>&gt;</span>我是大标题<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">            我是内容</span><br><span class="line">        <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><code>type</code>表示”类型“，<code>text</code>就是纯文本，CSS也是纯文本。</p>
+<h2 id="语法格式（键值对）："><a href="#语法格式（键值对）：" class="headerlink" title="语法格式（键值对）："></a>语法格式（键值对）：</h2><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">选择器 &#123;</span><br><span class="line">    k: v;</span><br><span class="line">    k: v;</span><br><span class="line">    k: v;</span><br><span class="line">    k: v1 v2 v3;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="代码注释"><a href="#代码注释" class="headerlink" title="代码注释"></a>代码注释</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">  <span class="comment">/*</span></span></span><br><span class="line"><span class="comment"><span class="language-css">  	具体的注释</span></span></span><br><span class="line"><span class="comment"><span class="language-css">  */</span></span></span><br><span class="line"><span class="language-css">  <span class="selector-tag">p</span> &#123;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">font-weight</span>: bold;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">font-style</span>: italic;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">color</span>: red;</span></span><br><span class="line"><span class="language-css">  &#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>CSS只有<code>/* */</code>注释，没有<code>//</code> 这种注释。</p>
+</blockquote>
+<h1 id="CSS属性"><a href="#CSS属性" class="headerlink" title="CSS属性"></a>CSS属性</h1><p><em>css中的单位是必须要写的，css没有默认单位。</em></p>
+<h2 id="绝对单位"><a href="#绝对单位" class="headerlink" title="绝对单位"></a>绝对单位</h2><blockquote>
+<p>1 <code>in</code> &#x3D; 2.54 <code>cm</code> &#x3D; 25.4 <code>mm</code> &#x3D; 72 <code>pt</code> &#x3D; 6 <code>pc</code></p>
+<p><code>in</code>：英寸</p>
+<p><code>cm</code>：厘米</p>
+<p><code>mm</code>：毫米</p>
+<p><code>pt</code>：点、英镑</p>
+<p><code>pc</code>：皮卡</p>
+</blockquote>
+<h2 id="相对单位"><a href="#相对单位" class="headerlink" title="相对单位"></a>相对单位</h2><blockquote>
+<p><code>px</code>：像素</p>
+<p><code>em</code>：印刷单位相当于12个点</p>
+<p><code>%</code>：百分比，相对于周围文字的大小</p>
+</blockquote>
+<h2 id="font字体属性"><a href="#font字体属性" class="headerlink" title="font字体属性"></a>font字体属性</h2><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">50px</span>; <span class="comment">/*字号大小*/</span></span><br><span class="line">  <span class="attribute">line-height</span>: <span class="number">30px</span>; <span class="comment">/*行高*/</span></span><br><span class="line">  <span class="attribute">font-family</span>: 幼园,黑体; <span class="comment">/*字体类型*/</span></span><br><span class="line">  <span class="attribute">font-style</span>: italic; <span class="comment">/*斜体*/</span></span><br><span class="line">  <span class="attribute">font-weight</span>: bold; <span class="comment">/*加粗*/</span></span><br><span class="line">  <span class="attribute">font-variant</span>: small-caps; <span class="comment">/*小写变大写*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong><code>line-hight</code></strong></p>
+<p>在css中，所有行都有行高。</p>
+<p><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/20170808_2220.png" alt="img"></p>
+<p>垂直方向来看，文字在自己的行里是居中的。比如，文字是14px，行高是24px，那么padding则是5px；为了严格保证字在行里面居中，工程师有一个约定：<strong>行高、字号，一般都是偶数。</strong> 这样可以保证，它们的差一定是偶数，能被2整除。行高也可以用百分比来设置。</p>
+<p><strong><code>vertical-align</code></strong></p>
+<p>可用于指定<strong>行内元素（inline）、行内块元素（inline-block）、表格的单元格（table-cell）的垂直对齐方式。</strong>主要用于图片、表格、文本的对齐。</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">vertical-align</span>: middle; <span class="comment">/*指定行级元素的垂直对齐方式。*/</span></span><br></pre></td></tr></table></figure>
+
+<p><strong><code>font-family</code></strong></p>
+<p>网页中不是所有的字体都能使用，要看这个字体是否有安装，比如设置：</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">font-family</span>: <span class="string">&quot;华文彩云&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>如果没有安装<em>华文彩云</em>这个字体，那么就会变成宋体。为了防止出现上述情况，可以使用<em>备选字体</em>。如下（可以备选多个）：</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">font-family</span>: <span class="string">&quot;华文彩云&quot;</span>, <span class="string">&quot;微软雅黑&quot;</span>, <span class="string">&quot;宋体&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>上方代码表示：如果未安装华文彩云字体，那么使用微软雅黑，如果也没安装微软雅黑字体，那么使用宋体。</p>
+<p>必须把英语字体放在最前面，这样所有的中文匹配不到英语字体，就会自动变为后面的中文字体。</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">font-family</span>: <span class="string">&quot;Times New Roman&quot;</span>, <span class="string">&quot;微软雅黑&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>下面的写法，会造成英文和中文都用中文字体来设置的效果：</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">font-family</span>: <span class="string">&quot;微软雅黑&quot;</span>, <span class="string">&quot;Times New Roman&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<p><strong><code>font-weight</code></strong></p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">font-weight</span>: normal; <span class="comment">/*正常*/</span></span><br><span class="line"><span class="attribute">font-weight</span>: bold; <span class="comment">/*加粗*/</span></span><br><span class="line"><span class="attribute">font-weight</span>: <span class="number">100</span>;</span><br><span class="line"><span class="attribute">font-weight</span>: <span class="number">200</span>;</span><br><span class="line"><span class="attribute">font-weight</span>: <span class="number">900</span>;</span><br></pre></td></tr></table></figure>
+
+<p><code>normal</code>相当于400，<code>bold</code>相当于700。</p>
+<h2 id="文本属性"><a href="#文本属性" class="headerlink" title="文本属性"></a>文本属性</h2><p>CSS样式中，常见的文本属性：</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+<th>值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>color</td>
+<td>文本颜色</td>
+<td>color</td>
+</tr>
+<tr>
+<td>direction</td>
+<td>设置文本方向</td>
+<td>ltr<br />rtl</td>
+</tr>
+<tr>
+<td>letter-spacing</td>
+<td>增加或减少字符间距</td>
+<td>normal<br />length</td>
+</tr>
+<tr>
+<td>text-align</td>
+<td>排列元素中的文本</td>
+<td>left<br />right<br />center<br />justify</td>
+</tr>
+<tr>
+<td>text-decoration</td>
+<td>向文本添加修饰</td>
+<td>none<br />underline<br />overline<br />blink</td>
+</tr>
+<tr>
+<td>text-indent</td>
+<td>缩进元素中文本的首行</td>
+<td>length<br />%</td>
+</tr>
+<tr>
+<td>text-shadow</td>
+<td>向文本添加阴影</td>
+<td>none<br />color<br />length</td>
+</tr>
+<tr>
+<td>text-transform</td>
+<td>控制元素中的字母</td>
+<td>none<br />capitalize<br />uppercase<br />lowercase</td>
+</tr>
+<tr>
+<td>unicode-bidi</td>
+<td>重写文本</td>
+<td>normal<br />embed<br />bidi-override</td>
+</tr>
+<tr>
+<td>white-space</td>
+<td>设置元素中空白的处理方式</td>
+<td>normal<br />pre<br />nowarp</td>
+</tr>
+<tr>
+<td>word-spacing</td>
+<td>增加或减少字间距</td>
+<td>normal<br />lengt</td>
+</tr>
+<tr>
+<td>word-warp</td>
+<td>允许对长的不可分割的单词进行分割并换行到下一行</td>
+<td>normal<br />break-word</td>
+</tr>
+</tbody></table>
+<h2 id="列表属性"><a href="#列表属性" class="headerlink" title="列表属性"></a>列表属性</h2><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">ul</span> <span class="selector-tag">li</span>&#123;</span><br><span class="line">  <span class="attribute">list-style-image</span>: <span class="built_in">url</span>(<span class="string">images/2.gif</span>); <span class="comment">/*列表项前设置为图片*/</span></span><br><span class="line">  <span class="attribute">margin-left</span>: <span class="number">80px</span>; <span class="comment">/*公有属性*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+<th>值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>list-style</td>
+<td>简写属性，用于将所有用于列表的属性设置于一个声明中。</td>
+<td>list-style-image<br />list-style-position<br />list-style-type</td>
+</tr>
+<tr>
+<td>list-style-image</td>
+<td>将图像设置为列表标记</td>
+<td>none<br />url</td>
+</tr>
+<tr>
+<td>list-style-position</td>
+<td>设置列表中列表项标记被放置的位置</td>
+<td>inside<br />outside</td>
+</tr>
+<tr>
+<td>list-style-type</td>
+<td>设置列表项标记的类型</td>
+<td>none<br />disc<br />circle<br />square<br />…</td>
+</tr>
+</tbody></table>
+<h2 id="overflow属性"><a href="#overflow属性" class="headerlink" title="overflow属性"></a>overflow属性</h2><p><code>overflow</code>属性值可以是：</p>
+<ul>
+<li><code>visible</code>:默认值。多余的内容不剪切也不添加滚动条，会全部显示出来。</li>
+<li><code>hidden</code>：不显示超过对象尺寸的内容。</li>
+<li><code>auto</code>:如果内容不超出，则不显示滚动条；如果内容超出，则显示滚动条。</li>
+<li><code>scroll</code>：windows平台下，无论内容是否超出，总是显示滚动条。mac平台下和auto属性相同。</li>
+</ul>
+<h2 id="鼠标属性"><a href="#鼠标属性" class="headerlink" title="鼠标属性"></a>鼠标属性</h2><p>鼠标的属性<code>cursor</code>属性值可以是：</p>
+<ul>
+<li><code>auto</code>:默认值。浏览器根据当前情况自动确定鼠标光标的类型。</li>
+<li><code>pointer</code>:IE6.0，竖起一只手指的手型光标。</li>
+<li><code>hand</code>：和<code>pointer</code>的作用一样。</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">p</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">  <span class="attribute">cursor</span>: hand; <span class="comment">/*鼠标放在标签上时，光标显示手状*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="滤镜"><a href="#滤镜" class="headerlink" title="滤镜"></a>滤镜</h2><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&lt;<span class="selector-tag">img</span> <span class="attribute">src</span>=&quot;<span class="number">3</span><span class="selector-class">.jpg</span>&quot; style=&quot;<span class="attribute">filter</span>:<span class="built_in">gray</span>()<span class="string">&quot;&gt; /*让图片变成灰度图（google浏览器不兼容）*/</span></span><br></pre></td></tr></table></figure>
+
+
+<h1 id="CSS布局"><a href="#CSS布局" class="headerlink" title="CSS布局"></a>CSS布局</h1><h1 id="CSS盒模型"><a href="#CSS盒模型" class="headerlink" title="CSS盒模型"></a>CSS盒模型</h1><h1 id="CSS选择器"><a href="#CSS选择器" class="headerlink" title="CSS选择器"></a>CSS选择器</h1>]]></content>
+      <categories>
+        <category>计算机</category>
+      </categories>
+      <tags>
+        <tag>web</tag>
+        <tag>CSS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>HTML</title>
     <url>/karma/2eec1551.html</url>
     <content><![CDATA[<p><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220511120351760.png" alt="What is HTML"></p>
@@ -416,203 +613,6 @@
       </tags>
   </entry>
   <entry>
-    <title>CSS</title>
-    <url>/karma/ee69e452.html</url>
-    <content><![CDATA[<img src="https://raw.githubusercontent.com/Karma1996/Picture/master/v2-a86dce4fef5c111f0db7e3fb291dd83f_720w.jpg" alt="CSS"  />
-
-<span id="more"></span>
-
-<p>CSS（Cascading Style Sheet）层叠样式表。CSS的作用就是给HTML页面标签添加各种样式，<strong>定义网页的显示效果</strong>。CSS的最新版本是CSS3。</p>
-<p>和HTML比较，CSS的优点：</p>
-<ol>
-<li>数据和显示分开</li>
-<li>降低网络流量</li>
-<li>网络视觉效果一致</li>
-<li>低耦合</li>
-</ol>
-<h1 id="CSS语法"><a href="#CSS语法" class="headerlink" title="CSS语法"></a>CSS语法</h1><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">            <span class="selector-tag">p</span> &#123;</span></span><br><span class="line"><span class="language-css">                <span class="attribute">color</span>: red;</span></span><br><span class="line"><span class="language-css">                <span class="attribute">font-size</span>: <span class="number">30px</span>;</span></span><br><span class="line"><span class="language-css">                <span class="attribute">text-decoration</span>: underline;</span></span><br><span class="line"><span class="language-css">                <span class="attribute">font-weight</span>: bold;</span></span><br><span class="line"><span class="language-css">                <span class="attribute">text-align</span>: center;</span></span><br><span class="line"><span class="language-css">                <span class="attribute">font-style</span>: italic;</span></span><br><span class="line"><span class="language-css">            &#125;</span></span><br><span class="line"><span class="language-css">            <span class="selector-tag">h1</span> &#123;</span></span><br><span class="line"><span class="language-css">                <span class="attribute">color</span>: blue;</span></span><br><span class="line"><span class="language-css">                <span class="attribute">font-size</span>: <span class="number">50px</span>;</span></span><br><span class="line"><span class="language-css">                <span class="attribute">font-weight</span>: bold;</span></span><br><span class="line"><span class="language-css">                <span class="attribute">background-color</span>: pink;</span></span><br><span class="line"><span class="language-css">            &#125;</span></span><br><span class="line"><span class="language-css">        </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h1</span>&gt;</span>我是大标题<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">            我是内容</span><br><span class="line">        <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p><code>type</code>表示”类型“，<code>text</code>就是纯文本，CSS也是纯文本。</p>
-<h2 id="语法格式（键值对）："><a href="#语法格式（键值对）：" class="headerlink" title="语法格式（键值对）："></a>语法格式（键值对）：</h2><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">选择器 &#123;</span><br><span class="line">    k: v;</span><br><span class="line">    k: v;</span><br><span class="line">    k: v;</span><br><span class="line">    k: v1 v2 v3;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="代码注释"><a href="#代码注释" class="headerlink" title="代码注释"></a>代码注释</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">  <span class="comment">/*</span></span></span><br><span class="line"><span class="comment"><span class="language-css">  	具体的注释</span></span></span><br><span class="line"><span class="comment"><span class="language-css">  */</span></span></span><br><span class="line"><span class="language-css">  <span class="selector-tag">p</span> &#123;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">font-weight</span>: bold;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">font-style</span>: italic;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">color</span>: red;</span></span><br><span class="line"><span class="language-css">  &#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>CSS只有<code>/* */</code>注释，没有<code>//</code> 这种注释。</p>
-</blockquote>
-<h1 id="CSS属性"><a href="#CSS属性" class="headerlink" title="CSS属性"></a>CSS属性</h1><p><em>css中的单位是必须要写的，css没有默认单位。</em></p>
-<h2 id="绝对单位"><a href="#绝对单位" class="headerlink" title="绝对单位"></a>绝对单位</h2><blockquote>
-<p>1 <code>in</code> &#x3D; 2.54 <code>cm</code> &#x3D; 25.4 <code>mm</code> &#x3D; 72 <code>pt</code> &#x3D; 6 <code>pc</code></p>
-<p><code>in</code>：英寸</p>
-<p><code>cm</code>：厘米</p>
-<p><code>mm</code>：毫米</p>
-<p><code>pt</code>：点、英镑</p>
-<p><code>pc</code>：皮卡</p>
-</blockquote>
-<h2 id="相对单位"><a href="#相对单位" class="headerlink" title="相对单位"></a>相对单位</h2><blockquote>
-<p><code>px</code>：像素</p>
-<p><code>em</code>：印刷单位相当于12个点</p>
-<p><code>%</code>：百分比，相对于周围文字的大小</p>
-</blockquote>
-<h2 id="font字体属性"><a href="#font字体属性" class="headerlink" title="font字体属性"></a>font字体属性</h2><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">50px</span>; <span class="comment">/*字号大小*/</span></span><br><span class="line">  <span class="attribute">line-height</span>: <span class="number">30px</span>; <span class="comment">/*行高*/</span></span><br><span class="line">  <span class="attribute">font-family</span>: 幼园,黑体; <span class="comment">/*字体类型*/</span></span><br><span class="line">  <span class="attribute">font-style</span>: italic; <span class="comment">/*斜体*/</span></span><br><span class="line">  <span class="attribute">font-weight</span>: bold; <span class="comment">/*加粗*/</span></span><br><span class="line">  <span class="attribute">font-variant</span>: small-caps; <span class="comment">/*小写变大写*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong><code>line-hight</code></strong></p>
-<p>在css中，所有行都有行高。</p>
-<p><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/20170808_2220.png" alt="img"></p>
-<p>垂直方向来看，文字在自己的行里是居中的。比如，文字是14px，行高是24px，那么padding则是5px；为了严格保证字在行里面居中，工程师有一个约定：<strong>行高、字号，一般都是偶数。</strong> 这样可以保证，它们的差一定是偶数，能被2整除。行高也可以用百分比来设置。</p>
-<p><strong><code>vertical-align</code></strong></p>
-<p>可用于指定<strong>行内元素（inline）、行内块元素（inline-block）、表格的单元格（table-cell）的垂直对齐方式。</strong>主要用于图片、表格、文本的对齐。</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">vertical-align</span>: middle; <span class="comment">/*指定行级元素的垂直对齐方式。*/</span></span><br></pre></td></tr></table></figure>
-
-<p><strong><code>font-family</code></strong></p>
-<p>网页中不是所有的字体都能使用，要看这个字体是否有安装，比如设置：</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">font-family</span>: <span class="string">&quot;华文彩云&quot;</span>;</span><br></pre></td></tr></table></figure>
-
-<p>如果没有安装<em>华文彩云</em>这个字体，那么就会变成宋体。为了防止出现上述情况，可以使用<em>备选字体</em>。如下（可以备选多个）：</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">font-family</span>: <span class="string">&quot;华文彩云&quot;</span>, <span class="string">&quot;微软雅黑&quot;</span>, <span class="string">&quot;宋体&quot;</span>;</span><br></pre></td></tr></table></figure>
-
-<p>上方代码表示：如果未安装华文彩云字体，那么使用微软雅黑，如果也没安装微软雅黑字体，那么使用宋体。</p>
-<p>必须把英语字体放在最前面，这样所有的中文匹配不到英语字体，就会自动变为后面的中文字体。</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">font-family</span>: <span class="string">&quot;Times New Roman&quot;</span>, <span class="string">&quot;微软雅黑&quot;</span>;</span><br></pre></td></tr></table></figure>
-
-<p>下面的写法，会造成英文和中文都用中文字体来设置的效果：</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">font-family</span>: <span class="string">&quot;微软雅黑&quot;</span>, <span class="string">&quot;Times New Roman&quot;</span>;</span><br></pre></td></tr></table></figure>
-
-<p><strong><code>font-weight</code></strong></p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">font-weight</span>: normal; <span class="comment">/*正常*/</span></span><br><span class="line"><span class="attribute">font-weight</span>: bold; <span class="comment">/*加粗*/</span></span><br><span class="line"><span class="attribute">font-weight</span>: <span class="number">100</span>;</span><br><span class="line"><span class="attribute">font-weight</span>: <span class="number">200</span>;</span><br><span class="line"><span class="attribute">font-weight</span>: <span class="number">900</span>;</span><br></pre></td></tr></table></figure>
-
-<p><code>normal</code>相当于400，<code>bold</code>相当于700。</p>
-<h2 id="文本属性"><a href="#文本属性" class="headerlink" title="文本属性"></a>文本属性</h2><p>CSS样式中，常见的文本属性：</p>
-<table>
-<thead>
-<tr>
-<th>属性</th>
-<th>描述</th>
-<th>值</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>color</td>
-<td>文本颜色</td>
-<td>color</td>
-</tr>
-<tr>
-<td>direction</td>
-<td>设置文本方向</td>
-<td>ltr<br />rtl</td>
-</tr>
-<tr>
-<td>letter-spacing</td>
-<td>增加或减少字符间距</td>
-<td>normal<br />length</td>
-</tr>
-<tr>
-<td>text-align</td>
-<td>排列元素中的文本</td>
-<td>left<br />right<br />center<br />justify</td>
-</tr>
-<tr>
-<td>text-decoration</td>
-<td>向文本添加修饰</td>
-<td>none<br />underline<br />overline<br />blink</td>
-</tr>
-<tr>
-<td>text-indent</td>
-<td>缩进元素中文本的首行</td>
-<td>length<br />%</td>
-</tr>
-<tr>
-<td>text-shadow</td>
-<td>向文本添加阴影</td>
-<td>none<br />color<br />length</td>
-</tr>
-<tr>
-<td>text-transform</td>
-<td>控制元素中的字母</td>
-<td>none<br />capitalize<br />uppercase<br />lowercase</td>
-</tr>
-<tr>
-<td>unicode-bidi</td>
-<td>重写文本</td>
-<td>normal<br />embed<br />bidi-override</td>
-</tr>
-<tr>
-<td>white-space</td>
-<td>设置元素中空白的处理方式</td>
-<td>normal<br />pre<br />nowarp</td>
-</tr>
-<tr>
-<td>word-spacing</td>
-<td>增加或减少字间距</td>
-<td>normal<br />lengt</td>
-</tr>
-<tr>
-<td>word-warp</td>
-<td>允许对长的不可分割的单词进行分割并换行到下一行</td>
-<td>normal<br />break-word</td>
-</tr>
-</tbody></table>
-<h2 id="列表属性"><a href="#列表属性" class="headerlink" title="列表属性"></a>列表属性</h2><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">ul</span> <span class="selector-tag">li</span>&#123;</span><br><span class="line">  <span class="attribute">list-style-image</span>: <span class="built_in">url</span>(<span class="string">images/2.gif</span>); <span class="comment">/*列表项前设置为图片*/</span></span><br><span class="line">  <span class="attribute">margin-left</span>: <span class="number">80px</span>; <span class="comment">/*公有属性*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<table>
-<thead>
-<tr>
-<th>属性</th>
-<th>描述</th>
-<th>值</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>list-style</td>
-<td>简写属性，用于将所有用于列表的属性设置于一个声明中。</td>
-<td>list-style-image<br />list-style-position<br />list-style-type</td>
-</tr>
-<tr>
-<td>list-style-image</td>
-<td>将图像设置为列表标记</td>
-<td>none<br />url</td>
-</tr>
-<tr>
-<td>list-style-position</td>
-<td>设置列表中列表项标记被放置的位置</td>
-<td>inside<br />outside</td>
-</tr>
-<tr>
-<td>list-style-type</td>
-<td>设置列表项标记的类型</td>
-<td>none<br />disc<br />circle<br />square<br />…</td>
-</tr>
-</tbody></table>
-<h2 id="overflow属性"><a href="#overflow属性" class="headerlink" title="overflow属性"></a>overflow属性</h2><p><code>overflow</code>属性值可以是：</p>
-<ul>
-<li><code>visible</code>:默认值。多余的内容不剪切也不添加滚动条，会全部显示出来。</li>
-<li><code>hidden</code>：不显示超过对象尺寸的内容。</li>
-<li><code>auto</code>:如果内容不超出，则不显示滚动条；如果内容超出，则显示滚动条。</li>
-<li><code>scroll</code>：windows平台下，无论内容是否超出，总是显示滚动条。mac平台下和auto属性相同。</li>
-</ul>
-<h2 id="鼠标属性"><a href="#鼠标属性" class="headerlink" title="鼠标属性"></a>鼠标属性</h2><p>鼠标的属性<code>cursor</code>属性值可以是：</p>
-<ul>
-<li><code>auto</code>:默认值。浏览器根据当前情况自动确定鼠标光标的类型。</li>
-<li><code>pointer</code>:IE6.0，竖起一只手指的手型光标。</li>
-<li><code>hand</code>：和<code>pointer</code>的作用一样。</li>
-</ul>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">p</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">  <span class="attribute">cursor</span>: hand; <span class="comment">/*鼠标放在标签上时，光标显示手状*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="滤镜"><a href="#滤镜" class="headerlink" title="滤镜"></a>滤镜</h2><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&lt;<span class="selector-tag">img</span> <span class="attribute">src</span>=&quot;<span class="number">3</span><span class="selector-class">.jpg</span>&quot; style=&quot;<span class="attribute">filter</span>:<span class="built_in">gray</span>()<span class="string">&quot;&gt; /*让图片变成灰度图（google浏览器不兼容）*/</span></span><br></pre></td></tr></table></figure>
-
-
-<h1 id="CSS布局"><a href="#CSS布局" class="headerlink" title="CSS布局"></a>CSS布局</h1><h1 id="CSS盒模型"><a href="#CSS盒模型" class="headerlink" title="CSS盒模型"></a>CSS盒模型</h1><h1 id="CSS选择器"><a href="#CSS选择器" class="headerlink" title="CSS选择器"></a>CSS选择器</h1>]]></content>
-      <categories>
-        <category>计算机</category>
-      </categories>
-      <tags>
-        <tag>web</tag>
-        <tag>CSS</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>HTML5</title>
     <url>/karma/98f3a6d9.html</url>
     <content><![CDATA[<img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220603114847621.png" alt="What is HTML5" style="zoom:67%;" />
@@ -955,104 +955,8 @@
         <category>计算机</category>
       </categories>
       <tags>
-        <tag>HTML5</tag>
         <tag>web</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>java开发环境搭建</title>
-    <url>/karma/ff3c284c.html</url>
-    <content><![CDATA[<img src="https://raw.githubusercontent.com/Karma1996/Picture/master/java-logo-png.png" alt="This is Java"  />
-
-<span id="more"></span>
-
-<h1 id="windows"><a href="#windows" class="headerlink" title="windows"></a>windows</h1><h2 id="系统信息"><a href="#系统信息" class="headerlink" title="系统信息"></a>系统信息</h2><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/20220504150058.png" alt="img" style="zoom:67%;" />
-
-<h2 id="jdk下载"><a href="#jdk下载" class="headerlink" title="jdk下载"></a><a href="https://www.oracle.com/java/technologies/downloads/#java8-windows">jdk下载</a></h2><p><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220504144453754.png" alt="image-20220504144453754"></p>
-<h2 id="jdk配置"><a href="#jdk配置" class="headerlink" title="jdk配置"></a>jdk配置</h2><ol>
-<li><p>制作压缩包</p>
-<p>orcale没有为windows系统提供<code>*.tar.gz</code>格式jdk，可以通过exe文件转换得到。具体方法参考链接：<a href="https://www.oracle.com/java/technologies/downloads/#java8-windows">https://www.oracle.com/java/technologies/downloads/#java8-windows</a></p>
-<img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220504144758781.png" alt="image-20220504144758781" style="zoom: 50%;" />
-</li>
-<li><p>环境变量配置</p>
-<img src="https://raw.githubusercontent.com/Karma1996/Picture/master/20220504150427.png" alt="img" style="zoom:67%;" />
-
-<blockquote>
-<p>增加系统变量：<code>JAVA_8</code>、<code>JAVA_HOME</code>；编辑系统变量<code>Path</code>，追加<code>%JAVA_HOME%\bin</code></p>
-</blockquote>
-</li>
-<li><p>验证配置</p>
-</li>
-</ol>
-<img src="https://raw.githubusercontent.com/Karma1996/Picture/master/20220504150159.png" alt="img" style="zoom:67%;" />
-
-<h1 id="linux"><a href="#linux" class="headerlink" title="linux"></a>linux</h1><h2 id="系统信息-1"><a href="#系统信息-1" class="headerlink" title="系统信息"></a>系统信息</h2><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/20220504142103.png" alt="img" style="zoom: 67%;" />
-
-<h2 id="jdk下载-1"><a href="#jdk下载-1" class="headerlink" title="jdk下载"></a><a href="https://www.oracle.com/java/technologies/javase/javase8u211-later-archive-downloads.html">jdk下载</a></h2><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220504134741441.png" alt="image-20220504134741441" style="zoom:50%;" />
-
-<p>选择适合自己系统架构的版本，文件格式建议选择<code>*.tar.gz</code>（可支持多版本切换）。</p>
-<h2 id="jdk配置-1"><a href="#jdk配置-1" class="headerlink" title="jdk配置"></a>jdk配置</h2><ol>
-<li><p>解压缩到指定路径</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">x jdk-8u331-linux-x64.tar.gz</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/20220504142256.png" alt="img"></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo <span class="built_in">mv</span> jdk1.8.0_331 /opt/jdk8u331</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/20220504142659.png" alt="img"></p>
-</li>
-<li><p>环境变量配置</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># PATH</span></span><br><span class="line"><span class="built_in">export</span> JAVA8=<span class="string">&#x27;/opt/jdk8u331&#x27;</span></span><br><span class="line"><span class="built_in">export</span> JAVA_HOME=<span class="variable">$JAVA8</span></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$&#123;PATH&#125;</span>:<span class="variable">$&#123;JAVA_HOME&#125;</span>/bin</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>验证配置</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~</span><br><span class="line">java -version</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/20220504142736.png" alt="img"></p>
-</li>
-</ol>
-<h1 id="macOS"><a href="#macOS" class="headerlink" title="macOS"></a>macOS</h1><h2 id="系统信息-2"><a href="#系统信息-2" class="headerlink" title="系统信息"></a>系统信息</h2><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220503180724598.png" alt="image-20220503180724598" style="zoom: 67%;" />
-
-<p>为完全释放M1芯片性能，故选用<a href="https://www.azul.com/downloads/?package=jdk#download-openjdk">zaul</a>提供的OpenJDK。</p>
-<p><em>非必要条件</em>：<a href="https://ohmyz.sh/">oh-my-zsh</a></p>
-<h2 id="jdk下载-2"><a href="#jdk下载-2" class="headerlink" title="jdk下载"></a><a href="https://www.azul.com/downloads/?package=jdk#download-openjdk">jdk下载</a></h2><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220503181307987.png" alt="image-20220503181307987" style="zoom: 50%;" />
-
-<p>建议Java Package选择<code>JDK FX</code>，下载格式选择<code>.tar.gz</code>（可支持多版本切换）。</p>
-<h2 id="jdk配置-2"><a href="#jdk配置-2" class="headerlink" title="jdk配置"></a>jdk配置</h2><ol>
-<li><p>解压缩下载包到指定路径</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">-- 解压缩</span><br><span class="line">x zulu8.62.0.19-ca-fx-jdk8.0.332-macosx_aarch64.tar.gz</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220503191722365.png" alt="image-20220503191722365"></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mv</span> zulu-8.jdk ~/Library/Java/JavaVirtualMachines/jdk8u332</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220503191919928.png" alt="image-20220503191919928"></p>
-</li>
-<li><p>环境变量配置</p>
-<p>~&#x2F;.zshrc文件追加配置</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># PATH</span></span><br><span class="line"><span class="built_in">export</span> JAVA8=/Users/karma/Library/Java/JavaVirtualMachines/jdk8u332/Contents/Home</span><br><span class="line"><span class="built_in">export</span> JAVA_HOME=<span class="variable">$&#123;JAVA8&#125;</span></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$&#123;PATH&#125;</span>:<span class="variable">$&#123;JAVA_HOME&#125;</span>/bin</span><br></pre></td></tr></table></figure>
-
-<p>保存文件后，更新配置</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.zshrc</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>验证配置</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~</span><br><span class="line">java -version</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220503193156497.png" alt="image-20220503193156497"></p>
-</li>
-</ol>
-<h2 id="其他问题"><a href="#其他问题" class="headerlink" title="其他问题"></a>其他问题</h2><ol>
-<li><p>无法打开“xxx”，因为Apple无法检查其是否包含恶意软件。</p>
-<img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220503193053338.png" alt="image-20220503193053338" style="zoom:50%;" />
-
-<blockquote>
-<p>打开“系统偏好设置”-&gt;“安全性与隐私”-&gt;“通用”，会看到如下所示的界面，选择“仍要打开”</p>
-</blockquote>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>计算机</category>
-      </categories>
-      <tags>
-        <tag>java</tag>
+        <tag>HTML5</tag>
       </tags>
   </entry>
   <entry>
@@ -1475,6 +1379,102 @@
       </categories>
       <tags>
         <tag>旅行</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>java开发环境搭建</title>
+    <url>/karma/ff3c284c.html</url>
+    <content><![CDATA[<img src="https://raw.githubusercontent.com/Karma1996/Picture/master/java-logo-png.png" alt="This is Java"  />
+
+<span id="more"></span>
+
+<h1 id="windows"><a href="#windows" class="headerlink" title="windows"></a>windows</h1><h2 id="系统信息"><a href="#系统信息" class="headerlink" title="系统信息"></a>系统信息</h2><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/20220504150058.png" alt="img" style="zoom:67%;" />
+
+<h2 id="jdk下载"><a href="#jdk下载" class="headerlink" title="jdk下载"></a><a href="https://www.oracle.com/java/technologies/downloads/#java8-windows">jdk下载</a></h2><p><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220504144453754.png" alt="image-20220504144453754"></p>
+<h2 id="jdk配置"><a href="#jdk配置" class="headerlink" title="jdk配置"></a>jdk配置</h2><ol>
+<li><p>制作压缩包</p>
+<p>orcale没有为windows系统提供<code>*.tar.gz</code>格式jdk，可以通过exe文件转换得到。具体方法参考链接：<a href="https://www.oracle.com/java/technologies/downloads/#java8-windows">https://www.oracle.com/java/technologies/downloads/#java8-windows</a></p>
+<img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220504144758781.png" alt="image-20220504144758781" style="zoom: 50%;" />
+</li>
+<li><p>环境变量配置</p>
+<img src="https://raw.githubusercontent.com/Karma1996/Picture/master/20220504150427.png" alt="img" style="zoom:67%;" />
+
+<blockquote>
+<p>增加系统变量：<code>JAVA_8</code>、<code>JAVA_HOME</code>；编辑系统变量<code>Path</code>，追加<code>%JAVA_HOME%\bin</code></p>
+</blockquote>
+</li>
+<li><p>验证配置</p>
+</li>
+</ol>
+<img src="https://raw.githubusercontent.com/Karma1996/Picture/master/20220504150159.png" alt="img" style="zoom:67%;" />
+
+<h1 id="linux"><a href="#linux" class="headerlink" title="linux"></a>linux</h1><h2 id="系统信息-1"><a href="#系统信息-1" class="headerlink" title="系统信息"></a>系统信息</h2><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/20220504142103.png" alt="img" style="zoom: 67%;" />
+
+<h2 id="jdk下载-1"><a href="#jdk下载-1" class="headerlink" title="jdk下载"></a><a href="https://www.oracle.com/java/technologies/javase/javase8u211-later-archive-downloads.html">jdk下载</a></h2><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220504134741441.png" alt="image-20220504134741441" style="zoom:50%;" />
+
+<p>选择适合自己系统架构的版本，文件格式建议选择<code>*.tar.gz</code>（可支持多版本切换）。</p>
+<h2 id="jdk配置-1"><a href="#jdk配置-1" class="headerlink" title="jdk配置"></a>jdk配置</h2><ol>
+<li><p>解压缩到指定路径</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">x jdk-8u331-linux-x64.tar.gz</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/20220504142256.png" alt="img"></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo <span class="built_in">mv</span> jdk1.8.0_331 /opt/jdk8u331</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/20220504142659.png" alt="img"></p>
+</li>
+<li><p>环境变量配置</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># PATH</span></span><br><span class="line"><span class="built_in">export</span> JAVA8=<span class="string">&#x27;/opt/jdk8u331&#x27;</span></span><br><span class="line"><span class="built_in">export</span> JAVA_HOME=<span class="variable">$JAVA8</span></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$&#123;PATH&#125;</span>:<span class="variable">$&#123;JAVA_HOME&#125;</span>/bin</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>验证配置</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~</span><br><span class="line">java -version</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/20220504142736.png" alt="img"></p>
+</li>
+</ol>
+<h1 id="macOS"><a href="#macOS" class="headerlink" title="macOS"></a>macOS</h1><h2 id="系统信息-2"><a href="#系统信息-2" class="headerlink" title="系统信息"></a>系统信息</h2><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220503180724598.png" alt="image-20220503180724598" style="zoom: 67%;" />
+
+<p>为完全释放M1芯片性能，故选用<a href="https://www.azul.com/downloads/?package=jdk#download-openjdk">zaul</a>提供的OpenJDK。</p>
+<p><em>非必要条件</em>：<a href="https://ohmyz.sh/">oh-my-zsh</a></p>
+<h2 id="jdk下载-2"><a href="#jdk下载-2" class="headerlink" title="jdk下载"></a><a href="https://www.azul.com/downloads/?package=jdk#download-openjdk">jdk下载</a></h2><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220503181307987.png" alt="image-20220503181307987" style="zoom: 50%;" />
+
+<p>建议Java Package选择<code>JDK FX</code>，下载格式选择<code>.tar.gz</code>（可支持多版本切换）。</p>
+<h2 id="jdk配置-2"><a href="#jdk配置-2" class="headerlink" title="jdk配置"></a>jdk配置</h2><ol>
+<li><p>解压缩下载包到指定路径</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">-- 解压缩</span><br><span class="line">x zulu8.62.0.19-ca-fx-jdk8.0.332-macosx_aarch64.tar.gz</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220503191722365.png" alt="image-20220503191722365"></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mv</span> zulu-8.jdk ~/Library/Java/JavaVirtualMachines/jdk8u332</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220503191919928.png" alt="image-20220503191919928"></p>
+</li>
+<li><p>环境变量配置</p>
+<p>~&#x2F;.zshrc文件追加配置</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># PATH</span></span><br><span class="line"><span class="built_in">export</span> JAVA8=/Users/karma/Library/Java/JavaVirtualMachines/jdk8u332/Contents/Home</span><br><span class="line"><span class="built_in">export</span> JAVA_HOME=<span class="variable">$&#123;JAVA8&#125;</span></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$&#123;PATH&#125;</span>:<span class="variable">$&#123;JAVA_HOME&#125;</span>/bin</span><br></pre></td></tr></table></figure>
+
+<p>保存文件后，更新配置</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.zshrc</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>验证配置</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~</span><br><span class="line">java -version</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220503193156497.png" alt="image-20220503193156497"></p>
+</li>
+</ol>
+<h2 id="其他问题"><a href="#其他问题" class="headerlink" title="其他问题"></a>其他问题</h2><ol>
+<li><p>无法打开“xxx”，因为Apple无法检查其是否包含恶意软件。</p>
+<img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220503193053338.png" alt="image-20220503193053338" style="zoom:50%;" />
+
+<blockquote>
+<p>打开“系统偏好设置”-&gt;“安全性与隐私”-&gt;“通用”，会看到如下所示的界面，选择“仍要打开”</p>
+</blockquote>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>计算机</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
       </tags>
   </entry>
   <entry>
