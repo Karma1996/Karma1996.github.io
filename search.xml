@@ -1016,6 +1016,102 @@
       </tags>
   </entry>
   <entry>
+    <title>java开发环境搭建</title>
+    <url>/karma/ff3c284c.html</url>
+    <content><![CDATA[<img src="https://raw.githubusercontent.com/Karma1996/Picture/master/java-logo-png.png" alt="This is Java"  />
+
+<span id="more"></span>
+
+<h1 id="windows"><a href="#windows" class="headerlink" title="windows"></a>windows</h1><h2 id="系统信息"><a href="#系统信息" class="headerlink" title="系统信息"></a>系统信息</h2><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/20220504150058.png" alt="img" style="zoom:67%;" />
+
+<h2 id="jdk下载"><a href="#jdk下载" class="headerlink" title="jdk下载"></a><a href="https://www.oracle.com/java/technologies/downloads/#java8-windows">jdk下载</a></h2><p><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220504144453754.png" alt="image-20220504144453754"></p>
+<h2 id="jdk配置"><a href="#jdk配置" class="headerlink" title="jdk配置"></a>jdk配置</h2><ol>
+<li><p>制作压缩包</p>
+<p>orcale没有为windows系统提供<code>*.tar.gz</code>格式jdk，可以通过exe文件转换得到。具体方法参考链接：<a href="https://www.oracle.com/java/technologies/downloads/#java8-windows">https://www.oracle.com/java/technologies/downloads/#java8-windows</a></p>
+<img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220504144758781.png" alt="image-20220504144758781" style="zoom: 50%;" />
+</li>
+<li><p>环境变量配置</p>
+<img src="https://raw.githubusercontent.com/Karma1996/Picture/master/20220504150427.png" alt="img" style="zoom:67%;" />
+
+<blockquote>
+<p>增加系统变量：<code>JAVA_8</code>、<code>JAVA_HOME</code>；编辑系统变量<code>Path</code>，追加<code>%JAVA_HOME%\bin</code></p>
+</blockquote>
+</li>
+<li><p>验证配置</p>
+</li>
+</ol>
+<img src="https://raw.githubusercontent.com/Karma1996/Picture/master/20220504150159.png" alt="img" style="zoom:67%;" />
+
+<h1 id="linux"><a href="#linux" class="headerlink" title="linux"></a>linux</h1><h2 id="系统信息-1"><a href="#系统信息-1" class="headerlink" title="系统信息"></a>系统信息</h2><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/20220504142103.png" alt="img" style="zoom: 67%;" />
+
+<h2 id="jdk下载-1"><a href="#jdk下载-1" class="headerlink" title="jdk下载"></a><a href="https://www.oracle.com/java/technologies/javase/javase8u211-later-archive-downloads.html">jdk下载</a></h2><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220504134741441.png" alt="image-20220504134741441" style="zoom:50%;" />
+
+<p>选择适合自己系统架构的版本，文件格式建议选择<code>*.tar.gz</code>（可支持多版本切换）。</p>
+<h2 id="jdk配置-1"><a href="#jdk配置-1" class="headerlink" title="jdk配置"></a>jdk配置</h2><ol>
+<li><p>解压缩到指定路径</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">x jdk-8u331-linux-x64.tar.gz</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/20220504142256.png" alt="img"></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo <span class="built_in">mv</span> jdk1.8.0_331 /opt/jdk8u331</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/20220504142659.png" alt="img"></p>
+</li>
+<li><p>环境变量配置</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># PATH</span></span><br><span class="line"><span class="built_in">export</span> JAVA8=<span class="string">&#x27;/opt/jdk8u331&#x27;</span></span><br><span class="line"><span class="built_in">export</span> JAVA_HOME=<span class="variable">$JAVA8</span></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$&#123;PATH&#125;</span>:<span class="variable">$&#123;JAVA_HOME&#125;</span>/bin</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>验证配置</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~</span><br><span class="line">java -version</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/20220504142736.png" alt="img"></p>
+</li>
+</ol>
+<h1 id="macOS"><a href="#macOS" class="headerlink" title="macOS"></a>macOS</h1><h2 id="系统信息-2"><a href="#系统信息-2" class="headerlink" title="系统信息"></a>系统信息</h2><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220503180724598.png" alt="image-20220503180724598" style="zoom: 67%;" />
+
+<p>为完全释放M1芯片性能，故选用<a href="https://www.azul.com/downloads/?package=jdk#download-openjdk">zaul</a>提供的OpenJDK。</p>
+<p><em>非必要条件</em>：<a href="https://ohmyz.sh/">oh-my-zsh</a></p>
+<h2 id="jdk下载-2"><a href="#jdk下载-2" class="headerlink" title="jdk下载"></a><a href="https://www.azul.com/downloads/?package=jdk#download-openjdk">jdk下载</a></h2><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220503181307987.png" alt="image-20220503181307987" style="zoom: 50%;" />
+
+<p>建议Java Package选择<code>JDK FX</code>，下载格式选择<code>.tar.gz</code>（可支持多版本切换）。</p>
+<h2 id="jdk配置-2"><a href="#jdk配置-2" class="headerlink" title="jdk配置"></a>jdk配置</h2><ol>
+<li><p>解压缩下载包到指定路径</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">-- 解压缩</span><br><span class="line">x zulu8.62.0.19-ca-fx-jdk8.0.332-macosx_aarch64.tar.gz</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220503191722365.png" alt="image-20220503191722365"></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mv</span> zulu-8.jdk ~/Library/Java/JavaVirtualMachines/jdk8u332</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220503191919928.png" alt="image-20220503191919928"></p>
+</li>
+<li><p>环境变量配置</p>
+<p>~&#x2F;.zshrc文件追加配置</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># PATH</span></span><br><span class="line"><span class="built_in">export</span> JAVA8=/Users/karma/Library/Java/JavaVirtualMachines/jdk8u332/Contents/Home</span><br><span class="line"><span class="built_in">export</span> JAVA_HOME=<span class="variable">$&#123;JAVA8&#125;</span></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$&#123;PATH&#125;</span>:<span class="variable">$&#123;JAVA_HOME&#125;</span>/bin</span><br></pre></td></tr></table></figure>
+
+<p>保存文件后，更新配置</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.zshrc</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>验证配置</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~</span><br><span class="line">java -version</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220503193156497.png" alt="image-20220503193156497"></p>
+</li>
+</ol>
+<h2 id="其他问题"><a href="#其他问题" class="headerlink" title="其他问题"></a>其他问题</h2><ol>
+<li><p>无法打开“xxx”，因为Apple无法检查其是否包含恶意软件。</p>
+<img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220503193053338.png" alt="image-20220503193053338" style="zoom:50%;" />
+
+<blockquote>
+<p>打开“系统偏好设置”-&gt;“安全性与隐私”-&gt;“通用”，会看到如下所示的界面，选择“仍要打开”</p>
+</blockquote>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>计算机</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>命令行工具之nc</title>
     <url>/karma/7bc65ae3.html</url>
     <content><![CDATA[<img src="https://raw.githubusercontent.com/Karma1996/Picture/master/man_nc.png" alt="man_nc" style="zoom:33%;" />
@@ -1379,102 +1475,6 @@
       </categories>
       <tags>
         <tag>旅行</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>java开发环境搭建</title>
-    <url>/karma/ff3c284c.html</url>
-    <content><![CDATA[<img src="https://raw.githubusercontent.com/Karma1996/Picture/master/java-logo-png.png" alt="This is Java"  />
-
-<span id="more"></span>
-
-<h1 id="windows"><a href="#windows" class="headerlink" title="windows"></a>windows</h1><h2 id="系统信息"><a href="#系统信息" class="headerlink" title="系统信息"></a>系统信息</h2><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/20220504150058.png" alt="img" style="zoom:67%;" />
-
-<h2 id="jdk下载"><a href="#jdk下载" class="headerlink" title="jdk下载"></a><a href="https://www.oracle.com/java/technologies/downloads/#java8-windows">jdk下载</a></h2><p><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220504144453754.png" alt="image-20220504144453754"></p>
-<h2 id="jdk配置"><a href="#jdk配置" class="headerlink" title="jdk配置"></a>jdk配置</h2><ol>
-<li><p>制作压缩包</p>
-<p>orcale没有为windows系统提供<code>*.tar.gz</code>格式jdk，可以通过exe文件转换得到。具体方法参考链接：<a href="https://www.oracle.com/java/technologies/downloads/#java8-windows">https://www.oracle.com/java/technologies/downloads/#java8-windows</a></p>
-<img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220504144758781.png" alt="image-20220504144758781" style="zoom: 50%;" />
-</li>
-<li><p>环境变量配置</p>
-<img src="https://raw.githubusercontent.com/Karma1996/Picture/master/20220504150427.png" alt="img" style="zoom:67%;" />
-
-<blockquote>
-<p>增加系统变量：<code>JAVA_8</code>、<code>JAVA_HOME</code>；编辑系统变量<code>Path</code>，追加<code>%JAVA_HOME%\bin</code></p>
-</blockquote>
-</li>
-<li><p>验证配置</p>
-</li>
-</ol>
-<img src="https://raw.githubusercontent.com/Karma1996/Picture/master/20220504150159.png" alt="img" style="zoom:67%;" />
-
-<h1 id="linux"><a href="#linux" class="headerlink" title="linux"></a>linux</h1><h2 id="系统信息-1"><a href="#系统信息-1" class="headerlink" title="系统信息"></a>系统信息</h2><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/20220504142103.png" alt="img" style="zoom: 67%;" />
-
-<h2 id="jdk下载-1"><a href="#jdk下载-1" class="headerlink" title="jdk下载"></a><a href="https://www.oracle.com/java/technologies/javase/javase8u211-later-archive-downloads.html">jdk下载</a></h2><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220504134741441.png" alt="image-20220504134741441" style="zoom:50%;" />
-
-<p>选择适合自己系统架构的版本，文件格式建议选择<code>*.tar.gz</code>（可支持多版本切换）。</p>
-<h2 id="jdk配置-1"><a href="#jdk配置-1" class="headerlink" title="jdk配置"></a>jdk配置</h2><ol>
-<li><p>解压缩到指定路径</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">x jdk-8u331-linux-x64.tar.gz</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/20220504142256.png" alt="img"></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo <span class="built_in">mv</span> jdk1.8.0_331 /opt/jdk8u331</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/20220504142659.png" alt="img"></p>
-</li>
-<li><p>环境变量配置</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># PATH</span></span><br><span class="line"><span class="built_in">export</span> JAVA8=<span class="string">&#x27;/opt/jdk8u331&#x27;</span></span><br><span class="line"><span class="built_in">export</span> JAVA_HOME=<span class="variable">$JAVA8</span></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$&#123;PATH&#125;</span>:<span class="variable">$&#123;JAVA_HOME&#125;</span>/bin</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>验证配置</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~</span><br><span class="line">java -version</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/20220504142736.png" alt="img"></p>
-</li>
-</ol>
-<h1 id="macOS"><a href="#macOS" class="headerlink" title="macOS"></a>macOS</h1><h2 id="系统信息-2"><a href="#系统信息-2" class="headerlink" title="系统信息"></a>系统信息</h2><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220503180724598.png" alt="image-20220503180724598" style="zoom: 67%;" />
-
-<p>为完全释放M1芯片性能，故选用<a href="https://www.azul.com/downloads/?package=jdk#download-openjdk">zaul</a>提供的OpenJDK。</p>
-<p><em>非必要条件</em>：<a href="https://ohmyz.sh/">oh-my-zsh</a></p>
-<h2 id="jdk下载-2"><a href="#jdk下载-2" class="headerlink" title="jdk下载"></a><a href="https://www.azul.com/downloads/?package=jdk#download-openjdk">jdk下载</a></h2><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220503181307987.png" alt="image-20220503181307987" style="zoom: 50%;" />
-
-<p>建议Java Package选择<code>JDK FX</code>，下载格式选择<code>.tar.gz</code>（可支持多版本切换）。</p>
-<h2 id="jdk配置-2"><a href="#jdk配置-2" class="headerlink" title="jdk配置"></a>jdk配置</h2><ol>
-<li><p>解压缩下载包到指定路径</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">-- 解压缩</span><br><span class="line">x zulu8.62.0.19-ca-fx-jdk8.0.332-macosx_aarch64.tar.gz</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220503191722365.png" alt="image-20220503191722365"></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mv</span> zulu-8.jdk ~/Library/Java/JavaVirtualMachines/jdk8u332</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220503191919928.png" alt="image-20220503191919928"></p>
-</li>
-<li><p>环境变量配置</p>
-<p>~&#x2F;.zshrc文件追加配置</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># PATH</span></span><br><span class="line"><span class="built_in">export</span> JAVA8=/Users/karma/Library/Java/JavaVirtualMachines/jdk8u332/Contents/Home</span><br><span class="line"><span class="built_in">export</span> JAVA_HOME=<span class="variable">$&#123;JAVA8&#125;</span></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$&#123;PATH&#125;</span>:<span class="variable">$&#123;JAVA_HOME&#125;</span>/bin</span><br></pre></td></tr></table></figure>
-
-<p>保存文件后，更新配置</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.zshrc</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>验证配置</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~</span><br><span class="line">java -version</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220503193156497.png" alt="image-20220503193156497"></p>
-</li>
-</ol>
-<h2 id="其他问题"><a href="#其他问题" class="headerlink" title="其他问题"></a>其他问题</h2><ol>
-<li><p>无法打开“xxx”，因为Apple无法检查其是否包含恶意软件。</p>
-<img src="https://raw.githubusercontent.com/Karma1996/Picture/master/image-20220503193053338.png" alt="image-20220503193053338" style="zoom:50%;" />
-
-<blockquote>
-<p>打开“系统偏好设置”-&gt;“安全性与隐私”-&gt;“通用”，会看到如下所示的界面，选择“仍要打开”</p>
-</blockquote>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>计算机</category>
-      </categories>
-      <tags>
-        <tag>java</tag>
       </tags>
   </entry>
   <entry>
