@@ -1,0 +1,28 @@
+{
+  "blogs": [
+    {
+      "slug": "wo-de-di-yi-pian-bo-ke",
+      "title": "我的第一篇博客",
+      "created": "2026-06-23",
+      "tags": [],
+      "hero": null,
+      "excerpt": ""
+    },
+    {
+      "slug": "wo-de-di-yi-pian-bo-ke-2",
+      "title": "我的第一篇博客",
+      "created": "2026-04-27",
+      "tags": [],
+      "hero": null,
+      "excerpt": ""
+    }
+  ],
+  "wiki": [
+    {
+      "slug": "mai-niu-nai",
+      "title": "买牛奶",
+      "type": "todo",
+      "updated": "2026-06-23"
+    }
+  ]
+}
